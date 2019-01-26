@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Climbable : Interactable
 {
-    GameObject player;
-    Rigidbody r_player;
-    bool move_up;
-    bool move_side;
-    float height;
-    Vector2 travel;
-    float distance;
-
-    
+    private GameObject player;
+    private Rigidbody r_player;
+    private bool move_up;
+    private bool move_side;
+    private float height;
+    private Vector2 travel;
+    private float distance;
+    public AudioClip climbingSound;
+    private AudioSource audioSource;
 
     public override void Interact(GameObject character, bool input)
     {
@@ -33,6 +33,7 @@ public class Climbable : Interactable
     public override void OnStart()
     {
         move_up = false;
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void Climb()
@@ -50,6 +51,8 @@ public class Climbable : Interactable
 
         move_up = true;
         move_side = true;
+
+        audioSource.PlayOneShot(climbingSound);
     }
 
     void Update()

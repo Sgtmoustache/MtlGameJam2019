@@ -7,6 +7,8 @@ public class LightTrigger : TriggerObject
     public Light light;
     public float intensity;
     public bool isOpen = false;
+    private AudioSource audioSource;
+    public AudioClip switchSound;
 
     public override void TriggerEffect(GameObject player = null)
     {
@@ -14,6 +16,7 @@ public class LightTrigger : TriggerObject
         {
             isOpen = !isOpen;
             light.enabled = isOpen;
+            audioSource.PlayOneShot(switchSound);
         }
     }
 
@@ -22,6 +25,9 @@ public class LightTrigger : TriggerObject
     {
         light.intensity = intensity;
         light.enabled = isOpen;
+
+        if (GetComponent<AudioSource>() == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     // Update is called once per frame

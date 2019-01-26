@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Pushable : Interactable
 {
+    public AudioClip DragingSound;
+    private AudioSource audioSource;
+
     public override void Interact(GameObject player, bool input)
     {
         try
@@ -19,25 +22,32 @@ public class Pushable : Interactable
                 {
                     player.GetComponentInChildren<Animator>().SetBool("Push", true);
                     Debug.Log("You pushed " + gameObject.name);
+                    if(!audioSource.isPlaying)
+                        audioSource.Play();
                 }
                 if (Input.GetKeyUp("w"))
                 {
                     player.GetComponentInChildren<Animator>().SetBool("Push", false);
                     Debug.Log("You stop pushing " + gameObject.name);
+                    audioSource.Stop();
                 }
                 if (Input.GetKeyDown("s"))
                 {
                     player.GetComponentInChildren<Animator>().SetBool("Pull", true);
                     Debug.Log("You pulled " + gameObject.name);
+                    if (!audioSource.isPlaying)
+                        audioSource.Play();
                 }
                 if (Input.GetKeyUp("s"))
                 {
                     player.GetComponentInChildren<Animator>().SetBool("Pull", false);
                     Debug.Log("You stop pulling " + gameObject.name);
+                    audioSource.Stop();
                 }
             }
             if (!input)
             {
+                audioSource.Stop();
                 player.GetComponentInChildren<Animator>().SetBool("Push", false);
                 player.GetComponentInChildren<Animator>().SetBool("Pull", false);
                 Debug.Log("Tu marches");
@@ -56,6 +66,10 @@ public class Pushable : Interactable
 
     public override void OnStart()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = DragingSound;
+        audioSource.loop = true;
+
         if (gameObject.GetComponent<Rigidbody>() == null)
         {
             gameObject.AddComponent<Rigidbody>();

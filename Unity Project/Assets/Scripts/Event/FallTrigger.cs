@@ -5,6 +5,8 @@ using UnityEngine;
 public class FallTrigger : TriggerObject
 {
     public float force = 10;
+    public AudioClip ImpactSound;
+    private AudioSource audioSource;
 
     public override void TriggerEffect(GameObject player = null)
     {
@@ -18,9 +20,12 @@ public class FallTrigger : TriggerObject
     }
     IEnumerator PushAnimationManager(GameObject player)
     {
+        audioSource.PlayOneShot(ImpactSound);
         player.GetComponentInChildren<Animator>().SetBool("Push", true);
         yield return new WaitForSeconds(2);
         player.GetComponentInChildren<Animator>().SetBool("Push", false);
+
+        
     }
 
     // Start is called before the first frame update
@@ -31,6 +36,9 @@ public class FallTrigger : TriggerObject
             transform.parent.gameObject.AddComponent<Rigidbody>();
             transform.parent.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         }
+
+        if (GetComponent<AudioSource>() == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     // Update is called once per frame
