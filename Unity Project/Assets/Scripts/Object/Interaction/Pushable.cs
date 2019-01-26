@@ -38,18 +38,16 @@ public class Pushable : Interactable
                     player.GetComponentInChildren<Animator>().SetBool("Pull", false);
                     Debug.Log("You stop pulling " + gameObject.name);
                 }
-
-                if (Input.GetMouseButtonUp(0))
-                {
-                    player.GetComponentInChildren<Animator>().SetBool("Push", false);
-                    player.GetComponentInChildren<Animator>().SetBool("Pull", false);
-                    Debug.Log("Tu marches");
-                    transform.parent = null;
-                    print("Left click was released");
-                    player.SendMessage("StopSideWay", true);
-                    player.SendMessage("StopRotation", true);
-                }
-
+            }
+            if (!input)
+            {
+                player.GetComponentInChildren<Animator>().SetBool("Push", false);
+                player.GetComponentInChildren<Animator>().SetBool("Pull", false);
+                Debug.Log("Tu marches");
+                transform.parent = null;
+                print("Left click was released");
+                player.SendMessage("StopSideWay", true);
+                player.SendMessage("StopRotation", true);
             }
 
         }
