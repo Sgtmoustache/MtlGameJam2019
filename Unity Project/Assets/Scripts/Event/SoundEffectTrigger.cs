@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SoundEffectTrigger : TriggerObject
 {
-    public AudioClip sound;
+    public AudioClip soundEffect;
 
+    [Range(0,1)]
+    public float volume;
     public override void TriggerEffect()
     {
-        
+        GetComponent<AudioSource>().PlayOneShot(soundEffect,volume);
     }
 }
