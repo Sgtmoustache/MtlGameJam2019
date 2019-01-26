@@ -56,6 +56,11 @@ public class Pushable : Interactable
 
     public override void OnStart()
     {
-        //throw new System.NotImplementedException();
+        if (gameObject.GetComponent<Rigidbody>() == null)
+        {
+            gameObject.AddComponent<Rigidbody>();
+        }
+
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
     }
 }
