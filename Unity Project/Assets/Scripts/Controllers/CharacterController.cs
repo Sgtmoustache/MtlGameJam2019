@@ -19,7 +19,6 @@ public class CharacterController : MonoBehaviour
 
 
     GameObject view;
-    GameObject character;
 
     public float interactionRange = 10f;
     private bool isLeftClicking = false;
@@ -29,8 +28,7 @@ public class CharacterController : MonoBehaviour
     {
         //CamLook
         Cursor.lockState = CursorLockMode.Locked;
-        character = this.transform.GetChild(0).gameObject;
-        view = character.transform.GetChild(0).gameObject;
+        view = transform.GetChild(0).gameObject;
     }
 
     void Update()
@@ -64,7 +62,7 @@ public class CharacterController : MonoBehaviour
 
             //rotation of camera
             view.transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(-mouseLook.y, -30, 80), Vector3.right);
-            transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
+            transform.localRotation = Quaternion.AngleAxis(mouseLook.x, transform.up);
 
             isLeftClicking = Input.GetMouseButton(0);
         }
@@ -76,11 +74,10 @@ public class CharacterController : MonoBehaviour
         RaycastHit hit;
         Debug.DrawRay(transform.position, transform.forward,Color.red);
 
-        Ray ray = new Ray(hands.transform.position, hands.transform.forward);
+        Ray ray = new Ray(hands.transform.position, Camera.main.transform.forward);
 
         if (Physics.Raycast(ray, out hit, interactionRange))
         {
-            Debug.Log(hit.collider.gameObject.name);
             Debug.DrawLine(hands.transform.position, hit.point, Color.red);
 
             if (hit.collider.gameObject.GetComponent<Interactable>() != null)

@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class SanityController : MonoBehaviour
 {
 
-    public int startingSanity = 100;
-    public int currentSanity;
-    public int lightIntensity;
+    public GameObject head;
+
+    public double startingSanity = 100;
+    public double currentSanity;
+    public double lightIntensity;
 
     
     public GameObject[] lights = new GameObject[20];
@@ -34,15 +36,16 @@ public class SanityController : MonoBehaviour
         foreach (GameObject l in lights)
         {
             Debug.Log("foreach");
-            Debug.Log(Physics.Linecast(transform.position, l.transform.position));
+            Debug.Log(Physics.Linecast(head.transform.position, l.transform.position));
+            Debug.DrawLine(head.transform.position, l.transform.position);
             //if no object is in between
-            if (Physics.Linecast(transform.position, l.transform.position))
+            if (!Physics.Linecast(head.transform.position, l.transform.position))
             {
 
                 //shenaniggans to calculate the ammount of light on the player
-                float distance = Vector3.Distance(l.transform.position, transform.position);
+                double distance = Vector3.Distance(l.transform.position, head.transform.position);
                 Light currentLight = l.GetComponent<Light>();
-                lightIntensity += (int)(currentLight.intensity * currentLight.range / distance);
+                lightIntensity += (currentLight.intensity * currentLight.range / distance);
                 Debug.Log(lightIntensity);
                 Debug.Log(currentLight.intensity);
                 Debug.Log(currentLight.range);
@@ -54,7 +57,7 @@ public class SanityController : MonoBehaviour
 
     public void Rate()
     {
-        currentSanity = currentSanity + (lightIntensity) - 5;
+        currentSanity = currentSanity + ((lightIntensity) - 5) * 0.1;
 
         if (currentSanity >= 100)
         {
@@ -77,7 +80,8 @@ public class SanityController : MonoBehaviour
         if (currentSanity <= 0 && !isDead)
         {
             // It should die.
-            Death();
+            currentSanity = 0;
+            //Death();
         }
     }
     void Death()
