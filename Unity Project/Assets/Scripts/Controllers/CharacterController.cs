@@ -16,13 +16,15 @@ public class CharacterController : MonoBehaviour
     Vector2 smoothVector;
     public float sensitivity = 1.0f;
     public float smoothing = 2.0f;
+    
 
 
     GameObject view;
 
-    public bool gateForward;
-    public bool gateSideway;
-    public bool gateRotation;
+    private bool gateForward;
+    private bool gateSideway;
+    private bool gateRotation;
+    private bool pause;
 
     public float interactionRange = 10f;
     private bool isLeftClicking = false;
@@ -38,12 +40,34 @@ public class CharacterController : MonoBehaviour
         gateForward = true;
         gateSideway = true;
         gateRotation = true;
+        pause = true;
     }
 
     void Update()
     {
-        //Mouvement
-        float m_forward = Input.GetAxis("Vertical") * speed;
+        if (Input.GetKeyDown("escape"))
+        {
+            if(pause)
+            {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                pause = false;
+                gateForward = false;
+                gateSideway = false;
+                gateRotation = false;
+            }    
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                pause = true;
+                gateForward = true;
+                gateSideway = true;
+                gateRotation = true;
+            }
+                
+        }
+            //Mouvement
+            float m_forward = Input.GetAxis("Vertical") * speed;
         float m_sideway = Input.GetAxis("Horizontal") * speed;
         m_forward *= Time.deltaTime;
         m_sideway *= Time.deltaTime;
@@ -53,11 +77,9 @@ public class CharacterController : MonoBehaviour
         transform.Translate(m_sideway, 0, m_forward);
 
         //CamLook
-        if (Input.GetKeyDown("escape"))
-            Cursor.lockState = CursorLockMode.None;
+       
 
-        if (Cursor.lockState != CursorLockMode.None)
-        {
+        
             if (gateRotation)
             {
                 //get mouse mouvement
@@ -79,7 +101,6 @@ public class CharacterController : MonoBehaviour
                 transform.localRotation = Quaternion.AngleAxis(mouseLook.x, transform.up);
             }
             isLeftClicking = Input.GetMouseButton(0);
-        }
         checkForObject();
         
     }
