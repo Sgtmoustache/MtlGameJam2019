@@ -8,8 +8,8 @@ public class CharacterController : MonoBehaviour
     public float speed = 1.5f;
 
     //RayCastLook
+    public GameObject foward;
     public GameObject hands;
-
 
     //CamLook
     Vector2 mouseLook;
@@ -20,8 +20,13 @@ public class CharacterController : MonoBehaviour
 
     GameObject view;
 
+    public bool gateForward;
+    public bool gateSideway;
+    public bool gateRotation;
+
     public float interactionRange = 10f;
     private bool isLeftClicking = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +34,10 @@ public class CharacterController : MonoBehaviour
         //CamLook
         Cursor.lockState = CursorLockMode.Locked;
         view = transform.GetChild(0).gameObject;
+
+        gateForward = true;
+        gateSideway = true;
+        gateRotation = true;
     }
 
     void Update()
@@ -38,6 +47,8 @@ public class CharacterController : MonoBehaviour
         float m_sideway = Input.GetAxis("Horizontal") * speed;
         m_forward *= Time.deltaTime;
         m_sideway *= Time.deltaTime;
+        if (!gateSideway) m_sideway = 0;
+        if (!gateForward) m_forward = 0;
 
         transform.Translate(m_sideway, 0, m_forward);
 
@@ -47,43 +58,79 @@ public class CharacterController : MonoBehaviour
 
         if (Cursor.lockState != CursorLockMode.None)
         {
-            //get mouse mouvement
-            var mouse = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
-            mouse = Vector2.Scale(mouse, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
-            smoothVector.x = Mathf.Lerp(smoothVector.x, mouse.x, 1f / smoothing);
-            smoothVector.y = Mathf.Lerp(smoothVector.y, mouse.y, 1f / smoothing);
-            mouseLook += smoothVector;
+            if (gateRotation)
+            {
+                //get mouse mouvement
+                var mouse = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+                mouse = Vector2.Scale(mouse, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
+                smoothVector.x = Mathf.Lerp(smoothVector.x, mouse.x, 1f / smoothing);
+                smoothVector.y = Mathf.Lerp(smoothVector.y, mouse.y, 1f / smoothing);
+                mouseLook += smoothVector;
 
-            //maximum angle Y
-            if (mouseLook.y < -70)
-                mouseLook.y = -70;
-            if (mouseLook.y > 40)
-                mouseLook.y = 40;
+                //maximum angle Y
+                if (mouseLook.y < -70)
+                    mouseLook.y = -70;
+                if (mouseLook.y > 40)
+                    mouseLook.y = 40;
 
             //rotation of camera
-            view.transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(-mouseLook.y, -30, 80), Vector3.right);
-            transform.localRotation = Quaternion.AngleAxis(mouseLook.x, transform.up);
-
+            
+                view.transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(-mouseLook.y, -30, 80), Vector3.right);
+                transform.localRotation = Quaternion.AngleAxis(mouseLook.x, transform.up);
+            }
             isLeftClicking = Input.GetMouseButton(0);
         }
-
         checkForObject();
+        
     }
+
+    public void StopForward(bool b)
+    {
+        gateForward = b;
+    }
+    public void StopSideWay(bool b)
+    {
+        gateSideway = b;
+    }
+    public void StopRotation(bool b)
+    {
+        gateRotation = b;
+    }
+
+
+
     private void checkForObject()
     {
         RaycastHit hit;
-        Debug.DrawRay(transform.position, transform.forward,Color.red);
+        Debug.DrawRay(transform.position, transform.forward, Color.red);
 
-        Ray ray = new Ray(hands.transform.position, Camera.main.transform.forward);
+        Ray ray = new Ray(foward.transform.position, Camera.main.transform.forward);
 
         if (Physics.Raycast(ray, out hit, interactionRange))
         {
-            Debug.DrawLine(hands.transform.position, hit.point, Color.red);
+            Debug.DrawLine(foward.transform.position, hit.point, Color.red);
 
-            if (hit.collider.gameObject.GetComponent<Interactable>() != null)
+            if (hit.collider.gameObject.GetComponent<Interactable>() is Climbable)
             {
+                Debug.Log("try to climb");
+                hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, Input.GetKeyDown("space"));
+            }
+
+            if (hit.collider.gameObject.GetComponent<Interactable>() is Pushable)
+            {
+                Debug.Log("try to push");
+                hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, Input.GetMouseButtonUp(0));
+            }
+
+            if (hit.collider.gameObject.GetComponent<Interactable>() is Triggerable || hit.collider.gameObject.GetComponent<Interactable>() is Collectable)
+            {
+                Debug.Log("try something");
                 hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, isLeftClicking);
             }
+
+
+
+
         }
     }
 }

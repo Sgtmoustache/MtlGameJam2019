@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class Triggerable : Interactable
 {
-    public int objectID;
+    public int objectID = -1;
+    private bool isToggled = false;
 
     public override void Interact(GameObject player, bool input)
     {
         try
         {
-            if (input && Inventory.HasCollected(objectID))
+            if(input && !isToggled)
             {
-                var animator = GetComponentInParent<Animator>();
-                if (animator != null)
+                //TOFIX
+                //player.GetComponentInChildren<Animator>().SetBool("Grab", true);
+
+                if (objectID == -1 || Inventory.HasCollected(objectID))
                 {
-                    animator.SetBool("Trigger", true);
-                    Debug.Log("You triggered " + gameObject.name);
+                    var animator = GetComponentInParent<Animator>();
+                    if (animator != null)
+                    {
+                        isToggled = true;
+                        player.GetComponentInChildren<Animator>().SetBool("Grab", true);
+                        animator.SetBool("Trigger", true);
+                        Debug.Log("You triggered " + gameObject.name);
+                    }
                 }
             }
         }

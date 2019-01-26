@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerObject : MonoBehaviour
+public abstract class TriggerObject : MonoBehaviour
 {
+    public int triggerCount = 1;
+    private int currentCount = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<BoxCollider>().isTrigger = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public abstract void TriggerEffect();
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (currentCount < triggerCount)
+        {
+            TriggerEffect();
+            currentCount++;
+        }
+            
     }
 }

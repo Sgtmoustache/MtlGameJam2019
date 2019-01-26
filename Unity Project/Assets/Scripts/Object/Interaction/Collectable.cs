@@ -10,6 +10,7 @@ public class Collectable : Interactable
     {
         if (input)
         {
+            player.GetComponentInChildren<Animator>().SetBool("Grab", true);
             Inventory.Collect(objectID);
             Debug.Log("You collected item #" + objectID);
             Destroy(this.gameObject);

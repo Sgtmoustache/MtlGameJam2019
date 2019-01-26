@@ -11,8 +11,4 @@ public abstract class Interactable : MonoBehaviour
     {
         OnStart();
     }
-    public void Update()
-    {
-
-    }
 }
