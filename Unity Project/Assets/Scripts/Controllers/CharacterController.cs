@@ -167,7 +167,7 @@ public class CharacterController : MonoBehaviour
             Debug.DrawLine(foward.transform.position, hit.point, Color.blue);
             foreach (Interactable interactable in hit.collider.gameObject.GetComponents<Interactable>())
             {
-                if ((interactable is Triggerable || interactable is Collectable) && Input.GetMouseButtonDown(0))
+                if ((interactable is Triggerable || interactable is Collectable || interactable is Pickable) && Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("try something");
                     interactable.Interact(gameObject, isLeftClicking);
