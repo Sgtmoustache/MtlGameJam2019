@@ -16,9 +16,9 @@ public class CharacterController : MonoBehaviour
     Vector2 smoothVector;
     public float sensitivity = 1.0f;
     public float smoothing = 2.0f;
-    
 
 
+    GameObject Pmenu;
     GameObject view;
 
     private bool gateForward;
@@ -33,14 +33,24 @@ public class CharacterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //CamLook
-        Cursor.lockState = CursorLockMode.Locked;
-        view = transform.GetChild(0).gameObject;
+        Pmenu = GameObject.Find("PauseMenu");
+        Resume();
 
+        //CamLook
+        view = transform.GetChild(0).gameObject;
+    }
+
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        pause = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        pause = true;
         gateForward = true;
         gateSideway = true;
         gateRotation = true;
-        pause = true;
+        Pmenu.SetActive(false);
     }
 
     void Update()
@@ -55,6 +65,8 @@ public class CharacterController : MonoBehaviour
                 gateForward = false;
                 gateSideway = false;
                 gateRotation = false;
+                Pmenu.SetActive(true);
+                Time.timeScale = 0f;
             }    
             else
             {
@@ -63,6 +75,7 @@ public class CharacterController : MonoBehaviour
                 gateForward = true;
                 gateSideway = true;
                 gateRotation = true;
+                Pmenu.SetActive(false);
             }
                 
         }

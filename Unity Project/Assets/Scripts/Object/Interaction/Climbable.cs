@@ -9,7 +9,7 @@ public class Climbable : Interactable
     bool move_up;
     bool move_side;
     float height;
-    float travel;
+    Vector2 travel;
     float distance;
 
     
@@ -37,7 +37,7 @@ public class Climbable : Interactable
 
     public void Climb()
     {
-        travel = 0;
+        travel = new Vector2();
         r_player = player.GetComponent<Rigidbody>();
         r_player.useGravity = false;
         distance = Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(player.transform.position.x, 0, player.transform.position.z));
@@ -46,7 +46,10 @@ public class Climbable : Interactable
         player.SendMessage("StopSideWay", false);
         player.SendMessage("StopRotation", false);
 
+        player.GetComponent<Collider>().isTrigger = true;
+
         move_up = true;
+        move_side = true;
     }
 
     void Update()
@@ -54,25 +57,25 @@ public class Climbable : Interactable
         if (move_up)
         {
             player.transform.Translate(0, 0.02f, 0);
-            travel += 0.02f;
-            if (travel >= height)
+            travel.y += 0.02f;
+            if (travel.y >= height)
             {
                 move_up = false;
-                move_side = true;
-                travel = 0;
             }
         }
         if (move_side)
         {
-            player.transform.Translate(0, 0, 0.04f);
-            travel += 0.04f;
-            if(travel >= distance)
+            player.transform.Translate(0, 0, 0.02f);
+            travel.x += 0.04f;
+            if(travel.x >= distance)
             {
                 r_player.useGravity = true;
                 move_side = false;
                 player.SendMessage("StopForward", true);
                 player.SendMessage("StopSideWay", true);
                 player.SendMessage("StopRotation", true);
+
+                player.GetComponent<Collider>().isTrigger = false;
             }
         }
     }
