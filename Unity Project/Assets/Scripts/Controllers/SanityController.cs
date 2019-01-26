@@ -11,10 +11,12 @@ public class SanityController : MonoBehaviour
     public int currentSanity;
     public int lightIntensity;
 
-    public GameObject player;
+    
     public GameObject[] lights = new GameObject[20];
 
     bool isDead;
+
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -22,24 +24,29 @@ public class SanityController : MonoBehaviour
         currentSanity = startingSanity;
         lights = GameObject.FindGameObjectsWithTag("Light");
         isDead = false;
-        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("update");
         lightIntensity = 0;
         foreach (GameObject l in lights)
         {
+            Debug.Log("foreach");
+            Debug.Log(Physics.Linecast(transform.position, l.transform.position));
             //if no object is in between
             if (Physics.Linecast(transform.position, l.transform.position))
             {
 
                 //shenaniggans to calculate the ammount of light on the player
-                float distance = Vector3.Distance(l.transform.position, player.transform.position);
+                float distance = Vector3.Distance(l.transform.position, transform.position);
                 Light currentLight = l.GetComponent<Light>();
                 lightIntensity += (int)(currentLight.intensity * currentLight.range / distance);
                 Debug.Log(lightIntensity);
+                Debug.Log(currentLight.intensity);
+                Debug.Log(currentLight.range);
+                Debug.Log(distance);
             }
         }
         Rate();
@@ -47,7 +54,7 @@ public class SanityController : MonoBehaviour
 
     public void Rate()
     {
-        currentSanity = currentSanity + (lightIntensity) - 25;
+        currentSanity = currentSanity + (lightIntensity) - 5;
 
         if (currentSanity >= 100)
         {
