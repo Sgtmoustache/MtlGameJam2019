@@ -9,12 +9,6 @@ public class CreditController : MonoBehaviour
 
     private int finalPosition = 1900;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
