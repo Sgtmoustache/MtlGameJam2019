@@ -64,7 +64,7 @@ public class CharacterController : MonoBehaviour
 
             //rotation of camera
             view.transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(-mouseLook.y, -30, 80), Vector3.right);
-            transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
+            transform.localRotation = Quaternion.AngleAxis(mouseLook.x, transform.up);
 
             isLeftClicking = Input.GetMouseButton(0);
         }
@@ -80,7 +80,6 @@ public class CharacterController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, interactionRange))
         {
-            Debug.Log(hit.collider.gameObject.name);
             Debug.DrawLine(hands.transform.position, hit.point, Color.red);
 
             if (hit.collider.gameObject.GetComponent<Interactable>() != null)

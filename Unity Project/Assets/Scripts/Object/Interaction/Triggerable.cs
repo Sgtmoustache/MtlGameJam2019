@@ -4,20 +4,29 @@ using UnityEngine;
 
 public class Triggerable : Interactable
 {
+    public int objectID;
+
     public override void Interact(GameObject player, bool input)
     {
-        Debug.Log(input);
+        try
+        {
+            if (input && Inventory.HasCollected(objectID))
+            {
+                var animator = GetComponentInParent<Animator>();
+                if (animator != null)
+                {
+                    animator.SetBool("Trigger", true);
+                    Debug.Log("You triggered " + gameObject.name);
+                }
+            }
+        }
+        catch (System.Exception)
+        {
+            throw;
+        }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public override void OnStart()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
