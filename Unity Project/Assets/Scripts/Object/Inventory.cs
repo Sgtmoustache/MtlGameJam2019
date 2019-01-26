@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
-public class Inventory : MonoBehaviour
+public class Inventory
 {
-    // Start is called before the first frame update
-    void Start()
+    public static List<bool> collectibles = new List<bool>();
+
+    public static void Collect(int value)
     {
-        
+        collectibles[value] = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static bool HasCollected(int value)
     {
-        
+        return collectibles[value];
     }
 }
