@@ -19,7 +19,6 @@ public class CharacterController : MonoBehaviour
 
 
     GameObject view;
-    GameObject character;
 
     public float interactionRange = 10f;
     private bool isLeftClicking = false;
@@ -29,8 +28,7 @@ public class CharacterController : MonoBehaviour
     {
         //CamLook
         Cursor.lockState = CursorLockMode.Locked;
-        character = this.transform.GetChild(0).gameObject;
-        view = character.transform.GetChild(0).gameObject;
+        view = transform.GetChild(0).gameObject;
     }
 
     void Update()
@@ -64,7 +62,7 @@ public class CharacterController : MonoBehaviour
 
             //rotation of camera
             view.transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(-mouseLook.y, -30, 80), Vector3.right);
-            transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
+            transform.localRotation = Quaternion.AngleAxis(mouseLook.x, transform.up);
 
             isLeftClicking = Input.GetMouseButton(0);
         }
