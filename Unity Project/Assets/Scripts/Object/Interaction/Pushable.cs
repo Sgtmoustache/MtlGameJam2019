@@ -11,10 +11,11 @@ public class Pushable : Interactable
             if (input)
             {
 
-
-                player.transform.GetChild(0).gameObject.transform.localRotation = Quaternion.AngleAxis(0, Vector3.right); ;
                 transform.parent = player.transform;
-               
+                player.SendMessage("StopSideWay", false);
+
+
+
                 if (Input.GetKeyDown("w"))
                 {
                     player.GetComponentInChildren<Animator>().SetBool("Push", true);
@@ -35,15 +36,19 @@ public class Pushable : Interactable
                     player.GetComponentInChildren<Animator>().SetBool("Pull", false);
                     Debug.Log("You stop pulling " + gameObject.name);
                 }
+
                 if (Input.GetMouseButtonUp(0))
                 {
-                    player.GetComponentInChildren<Animator>().SetBool("Push", false);
-                    player.GetComponentInChildren<Animator>().SetBool("Pull", false);
+                    // player.GetComponentInChildren<Animator>().SetBool("Push", false);
+                    // player.GetComponentInChildren<Animator>().SetBool("Pull", false);
                     Debug.Log("Tu marches");
                     transform.parent = null;
                     print("Left click was released");
+                    player.SendMessage("StopSideWay", true);
                 }
+
             }
+
         }
         catch (System.Exception)
         {

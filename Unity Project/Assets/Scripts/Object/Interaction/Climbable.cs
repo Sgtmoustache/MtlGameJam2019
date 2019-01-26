@@ -47,6 +47,9 @@ public class Climbable : Interactable
         else
             max_count = 50;
 
+        player.SendMessage("StopForward", false);
+        player.SendMessage("StopSideWay", false);
+        player.SendMessage("StopRotation", false);
 
         move_up = true;
     }
@@ -71,6 +74,9 @@ public class Climbable : Interactable
             {
                 r_player.useGravity = true;
                 move_side = false;
+                player.SendMessage("StopForward", true);
+                player.SendMessage("StopSideWay", true);
+                player.SendMessage("StopRotation", true);
             }
         }
     }

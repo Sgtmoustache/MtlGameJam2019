@@ -36,6 +36,12 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("view : " + view.transform.position);
+        Debug.Log("player: " + transform.position);
+        Debug.Log("view   rot: " + view.transform.rotation);
+        Debug.Log("player rot: " + transform.rotation);
+
+
         //Mouvement
         float m_forward = Input.GetAxis("Vertical") * speed;
         float m_sideway = Input.GetAxis("Horizontal") * speed;
@@ -97,12 +103,6 @@ public class CharacterController : MonoBehaviour
             {
                 hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, isLeftClicking);
             }
-
-            if (hit.collider.gameObject.GetComponent<Interactable>() is Pushable)
-            {
-                hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, Input.GetMouseButtonUp(0));
-            }
-            
         }
     }
 }
