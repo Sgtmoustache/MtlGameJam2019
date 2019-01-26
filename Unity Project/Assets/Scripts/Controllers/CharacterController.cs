@@ -10,7 +10,7 @@ public class CharacterController : MonoBehaviour
     //RayCastLook
     public GameObject foward;
     public GameObject hands;
-
+    public GameObject feets;
     //CamLook
     Vector2 mouseLook;
     Vector2 smoothVector;
@@ -104,9 +104,9 @@ public class CharacterController : MonoBehaviour
         RaycastHit hit;
         Debug.DrawRay(transform.position, transform.forward, Color.red);
 
-        Ray ray = new Ray(foward.transform.position, Camera.main.transform.forward);
+        Ray rayFeet = new Ray(feets.transform.position, transform.forward);
 
-        if (Physics.Raycast(ray, out hit, interactionRange))
+        if (Physics.Raycast(rayFeet, out hit, interactionRange))
         {
             Debug.DrawLine(foward.transform.position, hit.point, Color.red);
 
@@ -123,7 +123,16 @@ public class CharacterController : MonoBehaviour
                     Debug.Log("try to push");
                     interactable.Interact(gameObject, Input.GetMouseButton(0));
                 }
+            }
+        }
 
+        Ray rayFoward = new Ray(foward.transform.position, Camera.main.transform.forward);
+
+        if (Physics.Raycast(rayFoward, out hit, interactionRange))
+        {
+            Debug.DrawLine(foward.transform.position, hit.point, Color.blue);
+            foreach (Interactable interactable in hit.collider.gameObject.GetComponents<Interactable>())
+            {
                 if (interactable is Triggerable || interactable is Collectable)
                 {
                     Debug.Log("try something");
