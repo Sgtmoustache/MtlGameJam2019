@@ -31,13 +31,11 @@ public class SanityController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("update");
+     
         lightIntensity = 0;
         foreach (GameObject l in lights)
         {
-            Debug.Log("foreach");
-            Debug.Log(Physics.Linecast(head.transform.position, l.transform.position));
-            Debug.DrawLine(head.transform.position, l.transform.position);
+        
             //if no object is in between
             if (!Physics.Linecast(head.transform.position, l.transform.position))
             {
@@ -46,10 +44,6 @@ public class SanityController : MonoBehaviour
                 double distance = Vector3.Distance(l.transform.position, head.transform.position);
                 Light currentLight = l.GetComponent<Light>();
                 lightIntensity += (currentLight.intensity * currentLight.range / distance);
-                Debug.Log(lightIntensity);
-                Debug.Log(currentLight.intensity);
-                Debug.Log(currentLight.range);
-                Debug.Log(distance);
             }
         }
         Rate();
@@ -67,7 +61,7 @@ public class SanityController : MonoBehaviour
 
         //Debug.Log(currentSanity);
 
-        if (lightIntensity < 5)
+        if (lightIntensity < 2)
         {
             //Signal the player that he fears the dark
         }
@@ -88,5 +82,6 @@ public class SanityController : MonoBehaviour
     {
         //Annimations and triggers checkpoint
         isDead = true;
+        currentSanity = 0;
     }
 }
