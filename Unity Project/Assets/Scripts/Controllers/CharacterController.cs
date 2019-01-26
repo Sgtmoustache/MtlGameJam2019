@@ -21,6 +21,12 @@ public class CharacterController : MonoBehaviour
     GameObject Pmenu;
     GameObject view;
 
+    private AudioSource WalkAudioSource;
+    private AudioSource otherAudioSource;
+    public AudioClip pauseSound;
+    public AudioClip walkingSound;
+    private Vector3 lastPosition;
+
     private bool gateForward;
     private bool gateSideway;
     private bool gateRotation;
@@ -35,6 +41,8 @@ public class CharacterController : MonoBehaviour
     {
         Pmenu = GameObject.Find("PauseMenu");
         Resume();
+        WalkAudioSource = GetComponents<AudioSource>()[0];
+        otherAudioSource = GetComponents<AudioSource>()[1];
 
         //CamLook
         view = transform.GetChild(0).gameObject;
@@ -57,8 +65,10 @@ public class CharacterController : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
+            otherAudioSource.PlayOneShot(pauseSound);
             if(pause)
             {
+                
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 pause = false;
@@ -79,8 +89,9 @@ public class CharacterController : MonoBehaviour
             }
                 
         }
-            //Mouvement
-            float m_forward = Input.GetAxis("Vertical") * speed;
+        
+        //Mouvement
+        float m_forward = Input.GetAxis("Vertical") * speed;
         float m_sideway = Input.GetAxis("Horizontal") * speed;
         m_forward *= Time.deltaTime;
         m_sideway *= Time.deltaTime;
@@ -89,33 +100,43 @@ public class CharacterController : MonoBehaviour
 
         transform.Translate(m_sideway, 0, m_forward);
 
+
+
+        if (transform.position == lastPosition)
+        {
+            Debug.Log("Stop");
+            WalkAudioSource.Stop();
+        }
+        else if (!WalkAudioSource.isPlaying)
+        {
+            Debug.Log("Play");
+            WalkAudioSource.Play();
+        }
+
         //CamLook
-       
+        if (gateRotation)
+        {
+            //get mouse mouvement
+            var mouse = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+            mouse = Vector2.Scale(mouse, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
+            smoothVector.x = Mathf.Lerp(smoothVector.x, mouse.x, 1f / smoothing);
+            smoothVector.y = Mathf.Lerp(smoothVector.y, mouse.y, 1f / smoothing);
+            mouseLook += smoothVector;
 
-        
-            if (gateRotation)
-            {
-                //get mouse mouvement
-                var mouse = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
-                mouse = Vector2.Scale(mouse, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
-                smoothVector.x = Mathf.Lerp(smoothVector.x, mouse.x, 1f / smoothing);
-                smoothVector.y = Mathf.Lerp(smoothVector.y, mouse.y, 1f / smoothing);
-                mouseLook += smoothVector;
+            //maximum angle Y
+            if (mouseLook.y < -70)
+                mouseLook.y = -70;
+            if (mouseLook.y > 40)
+                mouseLook.y = 40;
 
-                //maximum angle Y
-                if (mouseLook.y < -70)
-                    mouseLook.y = -70;
-                if (mouseLook.y > 40)
-                    mouseLook.y = 40;
-
-            //rotation of camera
+        //rotation of camera
             
-                view.transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(-mouseLook.y, -30, 80), Vector3.right);
-                transform.localRotation = Quaternion.AngleAxis(mouseLook.x, transform.up);
-            }
-            isLeftClicking = Input.GetMouseButton(0);
+            view.transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(-mouseLook.y, -30, 80), Vector3.right);
+            transform.localRotation = Quaternion.AngleAxis(mouseLook.x, transform.up);
+        }
+        isLeftClicking = Input.GetMouseButton(0);
         checkForObject();
-        
+        lastPosition = transform.position;
     }
 
     public void StopForward(bool b)
@@ -130,8 +151,6 @@ public class CharacterController : MonoBehaviour
     {
         gateRotation = b;
     }
-
-
 
     private void checkForObject()
     {
