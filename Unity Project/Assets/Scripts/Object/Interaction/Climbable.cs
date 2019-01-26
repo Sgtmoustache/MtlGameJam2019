@@ -17,7 +17,9 @@ public class Climbable : Interactable
     public override void Interact(GameObject character, bool input)
     {
         player = character;
-        height = GetComponent<Collider>().bounds.size.y / 2 + transform.position.y - player.transform.position.y + 1;
+        height = GetComponent<Collider>().bounds.size.y + transform.position.y - player.transform.position.y + 1;
+        if(this.gameObject.tag.Equals("Cube"))
+            height = GetComponent<Collider>().bounds.size.y / 2 + transform.position.y - player.transform.position.y + 1;
 
         Debug.Log("hauteur  :" + height);
 
