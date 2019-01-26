@@ -7,7 +7,7 @@ public class PlugTrigger: TriggerObject
 
     public bool hasNightLight;
 
-    public override void TriggerEffect()
+    public override void TriggerEffect(GameObject player = null)
     {
 
         if (Inventory.HasNightlight() || hasNightLight)
