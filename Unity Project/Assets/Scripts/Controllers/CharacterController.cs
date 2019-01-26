@@ -34,7 +34,7 @@ public class CharacterController : MonoBehaviour
         m_forward *= Time.deltaTime;
         m_sideway *= Time.deltaTime;
 
-        transform.Translate(m_sideway, 0, m_forward);
+        character.transform.Translate(m_sideway, 0, m_forward);
 
 
         //CamLook
@@ -58,7 +58,7 @@ public class CharacterController : MonoBehaviour
 
             //rotation of camera
             view.transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(-mouseLook.y, -30, 80), Vector3.right);
-            transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
+            character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
 
         }
     }

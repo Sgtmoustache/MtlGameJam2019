@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class SanityController : MonoBehaviour
 {
 
     public int startingSanity = 100;
@@ -22,6 +22,7 @@ public class NewBehaviourScript : MonoBehaviour
         currentSanity = startingSanity;
         lights = GameObject.FindGameObjectsWithTag("Light");
         isDead = false;
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -38,6 +39,7 @@ public class NewBehaviourScript : MonoBehaviour
                 float distance = Vector3.Distance(l.transform.position, player.transform.position);
                 Light currentLight = l.GetComponent<Light>();
                 lightIntensity += (int)(currentLight.intensity * currentLight.range / distance);
+                Debug.Log(lightIntensity);
             }
         }
         Rate();
@@ -53,9 +55,9 @@ public class NewBehaviourScript : MonoBehaviour
             currentSanity = 100;
         }
 
-        Debug.Log(currentSanity);
+        //Debug.Log(currentSanity);
 
-        if (lightIntensity < -15)
+        if (lightIntensity < 5)
         {
             //Signal the player that he fears the dark
         }
