@@ -11,8 +11,8 @@ public class Pushable : Interactable
             if (input)
             {
 
-                player.GetComponent<RigidBody>().constraints = RigidbodyConstraints.FreezeRotationY
-                    | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeTranslationX;
+                player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY
+                    | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionX;
                 var animator = GetComponentInParent<Animator>();
                 if (animator != null)
                 {
