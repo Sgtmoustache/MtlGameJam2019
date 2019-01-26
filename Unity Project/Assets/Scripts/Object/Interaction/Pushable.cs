@@ -13,7 +13,8 @@ public class Pushable : Interactable
 
                 transform.parent = player.transform;
                 player.SendMessage("StopSideWay", false);
-                
+                player.SendMessage("StopRotation", false);
+
 
 
 
@@ -46,6 +47,7 @@ public class Pushable : Interactable
                     transform.parent = null;
                     print("Left click was released");
                     player.SendMessage("StopSideWay", true);
+                    player.SendMessage("StopRotation", true);
                 }
 
             }
