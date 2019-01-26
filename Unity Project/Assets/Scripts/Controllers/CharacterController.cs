@@ -110,27 +110,26 @@ public class CharacterController : MonoBehaviour
         {
             Debug.DrawLine(foward.transform.position, hit.point, Color.red);
 
-            if (hit.collider.gameObject.GetComponent<Interactable>() is Climbable)
+            foreach (Interactable interactable in hit.collider.gameObject.GetComponents<Interactable>())
             {
-                Debug.Log("try to climb");
-                hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, Input.GetKeyDown("space"));
+                if (interactable is Climbable && Input.GetKey("space"))
+                {
+                    Debug.Log("try to climb");
+                    interactable.Interact(gameObject, Input.GetKey("space"));
+                }
+
+                if (interactable is Pushable)
+                {
+                    Debug.Log("try to push");
+                    interactable.Interact(gameObject, Input.GetMouseButton(0));
+                }
+
+                if (interactable is Triggerable || interactable is Collectable)
+                {
+                    Debug.Log("try something");
+                    interactable.Interact(gameObject, isLeftClicking);
+                }
             }
-
-            if (hit.collider.gameObject.GetComponent<Interactable>() is Pushable)
-            {
-                Debug.Log("try to push");
-                hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, Input.GetMouseButtonUp(0));
-            }
-
-            if (hit.collider.gameObject.GetComponent<Interactable>() is Triggerable || hit.collider.gameObject.GetComponent<Interactable>() is Collectable)
-            {
-                Debug.Log("try something");
-                hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, isLeftClicking);
-            }
-
-
-
-
         }
     }
 }
