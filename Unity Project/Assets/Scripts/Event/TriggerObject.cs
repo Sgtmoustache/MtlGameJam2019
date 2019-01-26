@@ -4,8 +4,9 @@ using UnityEngine;
 
 public abstract class TriggerObject : MonoBehaviour
 {
-    public int triggerCount = 1;
+    public int triggerCount = 0;
     private int currentCount = 0;
+    public bool collisionTrigger = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public abstract class TriggerObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (currentCount < triggerCount)
+        if (collisionTrigger && (currentCount < triggerCount || triggerCount < 0))
         {
             TriggerEffect();
             currentCount++;

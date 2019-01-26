@@ -26,6 +26,13 @@ public class Triggerable : Interactable
                         animator.SetBool("Trigger", true);
                         Debug.Log("You triggered " + gameObject.name);
                     }
+
+                    //If has a TriggerObject component.
+                    var triggerObject = GetComponent<TriggerObject>();
+                    if (triggerObject != null)
+                    {
+                        triggerObject.TriggerEffect();
+                    }
                 }
             }
         }
