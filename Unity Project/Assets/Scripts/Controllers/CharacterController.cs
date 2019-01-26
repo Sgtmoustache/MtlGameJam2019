@@ -20,11 +20,13 @@ public class CharacterController : MonoBehaviour
 
     GameObject view;
 
+    public bool gateForward;
+    public bool gateSideway;
+    public bool gateRotation;
+
     public float interactionRange = 10f;
     private bool isLeftClicking = false;
 
-
-    bool moveWhenGrab;
 
     // Start is called before the first frame update
     void Start()
@@ -32,22 +34,21 @@ public class CharacterController : MonoBehaviour
         //CamLook
         Cursor.lockState = CursorLockMode.Locked;
         view = transform.GetChild(0).gameObject;
+
+        gateForward = true;
+        gateSideway = true;
+        gateRotation = true;
     }
 
     void Update()
     {
-        Debug.Log("view : " + view.transform.position);
-        Debug.Log("player: " + transform.position);
-        Debug.Log("view   rot: " + view.transform.rotation);
-        Debug.Log("player rot: " + transform.rotation);
-
-
         //Mouvement
         float m_forward = Input.GetAxis("Vertical") * speed;
         float m_sideway = Input.GetAxis("Horizontal") * speed;
         m_forward *= Time.deltaTime;
         m_sideway *= Time.deltaTime;
-        if (!moveWhenGrab) m_sideway = 0;
+        if (!gateSideway) m_sideway = 0;
+        if (!gateForward) m_forward = 0;
 
         transform.Translate(m_sideway, 0, m_forward);
 
@@ -57,7 +58,7 @@ public class CharacterController : MonoBehaviour
 
         if (Cursor.lockState != CursorLockMode.None)
         {
-            if (moveWhenGrab)
+            if (gateRotation)
             {
                 //get mouse mouvement
                 var mouse = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
@@ -79,10 +80,25 @@ public class CharacterController : MonoBehaviour
             }
             isLeftClicking = Input.GetMouseButton(0);
         }
-        moveWhenGrab = true;
         checkForObject();
         
     }
+
+    public void StopForward(bool b)
+    {
+        gateForward = b;
+    }
+    public void StopSideWay(bool b)
+    {
+        gateSideway = b;
+    }
+    public void StopRotation(bool b)
+    {
+        gateRotation = b;
+    }
+
+
+
     private void checkForObject()
     {
         RaycastHit hit;
@@ -96,7 +112,7 @@ public class CharacterController : MonoBehaviour
 
             if (hit.collider.gameObject.GetComponent<Interactable>() != null && isLeftClicking)
             {
-                moveWhenGrab = false;
+
             }
 
             if (hit.collider.gameObject.GetComponent<Interactable>() != null)

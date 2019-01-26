@@ -13,6 +13,7 @@ public class Pushable : Interactable
 
                 transform.parent = player.transform;
                 player.SendMessage("StopSideWay", false);
+                
 
 
 
@@ -39,8 +40,8 @@ public class Pushable : Interactable
 
                 if (Input.GetMouseButtonUp(0))
                 {
-                    // player.GetComponentInChildren<Animator>().SetBool("Push", false);
-                    // player.GetComponentInChildren<Animator>().SetBool("Pull", false);
+                    player.GetComponentInChildren<Animator>().SetBool("Push", false);
+                    player.GetComponentInChildren<Animator>().SetBool("Pull", false);
                     Debug.Log("Tu marches");
                     transform.parent = null;
                     print("Left click was released");
