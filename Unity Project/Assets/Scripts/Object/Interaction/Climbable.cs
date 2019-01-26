@@ -8,8 +8,7 @@ public class Climbable : Interactable
     Rigidbody r_player;
     bool move_up;
     bool move_side;
-    int count;
-    int max_count;
+    float height;
     float travel;
     float distance;
 
@@ -34,17 +33,11 @@ public class Climbable : Interactable
 
     public void Climb()
     {
-        Debug.Log("climb");
-        count = 0;
         travel = 0;
         r_player = player.GetComponent<Rigidbody>();
         r_player.useGravity = false;
         distance = Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(player.transform.position.x, 0, player.transform.position.z));
-
-        if (GetComponent<Collider>().bounds.size.y / 2 + transform.position.y - player.transform.position.y < -0.4)
-            max_count = 25;
-        else
-            max_count = 50;
+        height = GetComponent<Collider>().bounds.size.y / 2 + transform.position.y;
 
         player.SendMessage("StopForward", false);
         player.SendMessage("StopSideWay", false);
@@ -58,8 +51,8 @@ public class Climbable : Interactable
         if (move_up)
         {
             player.transform.Translate(0, 0.02f, 0);
-            count++;
-            if(count >= max_count)
+            travel += 0.02f;
+            if (travel >= height)
             {
                 move_up = false;
                 move_side = true;
