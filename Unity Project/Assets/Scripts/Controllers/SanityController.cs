@@ -31,10 +31,18 @@ public class SanityController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
+     
+        lightIntensity = 0;
+        foreach (GameObject l in lights)
+        {
+        
+=======
         lightIntensity = 0;
         foreach (GameObject l in lights)
         {
             Debug.DrawLine(head.transform.position, l.transform.position);
+>>>>>>> origin/master
             //if no object is in between
             if (!Physics.Linecast(head.transform.position, l.transform.position))
             {
@@ -60,7 +68,7 @@ public class SanityController : MonoBehaviour
 
         //Debug.Log(currentSanity);
 
-        if (lightIntensity < 5)
+        if (lightIntensity < 2)
         {
             //Signal the player that he fears the dark
         }
@@ -81,5 +89,6 @@ public class SanityController : MonoBehaviour
     {
         //Annimations and triggers checkpoint
         isDead = true;
+        currentSanity = 0;
     }
 }

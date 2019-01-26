@@ -80,10 +80,17 @@ public class CharacterController : MonoBehaviour
         {
             Debug.DrawLine(foward.transform.position, hit.point, Color.red);
 
+
             if (hit.collider.gameObject.GetComponent<Interactable>() != null)
             {
                 hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, isLeftClicking);
             }
+
+            if (hit.collider.gameObject.GetComponent<Interactable>() is Pushable)
+            {
+                hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, Input.GetMouseButtonUp(0));
+            }
+            
         }
     }
 }
