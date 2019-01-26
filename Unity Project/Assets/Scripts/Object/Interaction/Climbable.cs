@@ -4,43 +4,74 @@ using UnityEngine;
 
 public class Climbable : Interactable
 {
+    GameObject player;
+    Rigidbody r_player;
+    bool move_up;
+    bool move_side;
+    int count;
+    int max_count;
+    float travel;
+    float distance;
 
-    public override void Interact(GameObject player, bool input)
+    
+
+    public override void Interact(GameObject character, bool input)
     {
-        
-        if (input && transform.lossyScale.y/2 + transform.position.y - player.transform.position.y <= 0)
-        {
-            Climb(player);    
+        player = character;
+        if (input && transform.lossyScale.y / 2 + transform.position.y - player.transform.position.y <= 0)
+        { 
+            Climb();
         }
-        
+
 
     }
 
     public override void OnStart()
     {
-
+        move_up = false;
     }
 
-    public void Climb(GameObject player)
+    public void Climb()
     {
-            Rigidbody r_player = player.GetComponent<Rigidbody>();
-            r_player.useGravity = false;
+        Debug.Log("climb");
+        count = 0;
+        travel = 0;
+        r_player = player.GetComponent<Rigidbody>();
+        r_player.useGravity = false;
+        distance = Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(player.transform.position.x, 0, player.transform.position.z));
 
-            Debug.Log("climb");
-            Vector3 newPosition = player.transform.position;
-            newPosition.y += transform.lossyScale.y / 2 + transform.position.y;
-            Debug.Log(player.transform.position);
-            Debug.Log(newPosition);
-            player.transform.position = Vector3.MoveTowards(player.transform.position, newPosition, Time.deltaTime * 100);
+        Debug.Log(transform.lossyScale.y / 2 + transform.position.y - player.transform.position.y);
 
-            /*
-            float m_forward = Input.GetAxis("Vertical") * speed;
-            float m_sideway = Input.GetAxis("Horizontal") * speed;
-            m_forward *= Time.deltaTime;
-            m_sideway *= Time.deltaTime;
-            transform.Translate(m_sideway, 0, m_forward);*/
+        if (transform.lossyScale.y / 2 + transform.position.y - player.transform.position.y < -0.4)
+            max_count = 25;
+        else
+            max_count = 50;
 
-            player.transform.Translate(0, 0, 1);
-            r_player.useGravity = true;
+
+        move_up = true;
+    }
+
+    void Update()
+    {
+        if (move_up)
+        {
+            player.transform.Translate(0, 0.02f, 0);
+            count++;
+            if(count >= max_count)
+            {
+                move_up = false;
+                move_side = true;
+            }
+        }
+        if (move_side)
+        {
+            player.transform.Translate(0, 0, 0.04f);
+            travel += 0.04f;
+            if(travel >= distance)
+            {
+                r_player.useGravity = true;
+                move_side = false;
+            }
+        }
     }
 }
