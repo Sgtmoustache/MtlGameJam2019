@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class TriggerObject : MonoBehaviour
-{
-    BoxCollider detectionZome; 
-
+{ 
     // Start is called before the first frame update
     void Start()
     {
-        detectionZome = GetComponent<BoxCollider>();
+        GetComponent<BoxCollider>().isTrigger = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public abstract void TriggerEffect();
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        TriggerEffect();
     }
 }
