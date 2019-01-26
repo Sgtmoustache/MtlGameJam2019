@@ -76,7 +76,7 @@ public class CharacterController : MonoBehaviour
         RaycastHit hit;
         Debug.DrawRay(transform.position, transform.forward,Color.red);
 
-        Ray ray = new Ray(hands.transform.position, hands.transform.forward);
+        Ray ray = new Ray(hands.transform.position, Camera.main.transform.forward);
 
         if (Physics.Raycast(ray, out hit, interactionRange))
         {
