@@ -8,8 +8,8 @@ public class CharacterController : MonoBehaviour
     public float speed = 1.5f;
 
     //RayCastLook
+    public GameObject foward;
     public GameObject hands;
-
 
     //CamLook
     Vector2 mouseLook;
@@ -74,11 +74,11 @@ public class CharacterController : MonoBehaviour
         RaycastHit hit;
         Debug.DrawRay(transform.position, transform.forward,Color.red);
 
-        Ray ray = new Ray(hands.transform.position, Camera.main.transform.forward);
+        Ray ray = new Ray(foward.transform.position, Camera.main.transform.forward);
 
         if (Physics.Raycast(ray, out hit, interactionRange))
         {
-            Debug.DrawLine(hands.transform.position, hit.point, Color.red);
+            Debug.DrawLine(foward.transform.position, hit.point, Color.red);
 
             if (hit.collider.gameObject.GetComponent<Interactable>() != null)
             {
