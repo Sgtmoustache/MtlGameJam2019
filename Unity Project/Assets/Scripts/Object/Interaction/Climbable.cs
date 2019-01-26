@@ -18,7 +18,8 @@ public class Climbable : Interactable
     public override void Interact(GameObject character, bool input)
     {
         player = character;
-        if (input && transform.lossyScale.y / 2 + transform.position.y - player.transform.position.y <= 0)
+        
+        if (input && GetComponent<Collider>().bounds.size.y/2 + transform.position.y - player.transform.position.y <= 0.1)
         { 
             Climb();
         }
@@ -40,9 +41,7 @@ public class Climbable : Interactable
         r_player.useGravity = false;
         distance = Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(player.transform.position.x, 0, player.transform.position.z));
 
-        Debug.Log(transform.lossyScale.y / 2 + transform.position.y - player.transform.position.y);
-
-        if (transform.lossyScale.y / 2 + transform.position.y - player.transform.position.y < -0.4)
+        if (GetComponent<Collider>().bounds.size.y / 2 + transform.position.y - player.transform.position.y < -0.4)
             max_count = 25;
         else
             max_count = 50;
