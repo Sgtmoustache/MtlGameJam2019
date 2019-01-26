@@ -10,16 +10,11 @@ public class Pushable : Interactable
         {
             if (input)
             {
-              
-                //player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY
-                   // | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionX;
+
+
+                player.transform.GetChild(0).gameObject.transform.localRotation = Quaternion.AngleAxis(0, Vector3.right); ;
                 transform.parent = player.transform;
-                var animator = GetComponentInParent<Animator>();
-               /* if (animator != null)
-                {
-                    //animator.SetBool("Grab", true);
-                    Debug.Log("You grabbed " + gameObject.name);
-                }*/
+               
                 if (Input.GetKeyDown("w"))
                 {
                     player.GetComponentInChildren<Animator>().SetBool("Push", true);
@@ -37,11 +32,13 @@ public class Pushable : Interactable
                 }
                 if (Input.GetKeyUp("s"))
                 {
-                    player.GetComponentInChildren<Animator>().SetBool("Pull", true);
+                    player.GetComponentInChildren<Animator>().SetBool("Pull", false);
                     Debug.Log("You stop pulling " + gameObject.name);
                 }
                 if (Input.GetMouseButtonUp(0))
                 {
+                    player.GetComponentInChildren<Animator>().SetBool("Push", false);
+                    player.GetComponentInChildren<Animator>().SetBool("Pull", false);
                     Debug.Log("Tu marches");
                     transform.parent = null;
                     print("Left click was released");

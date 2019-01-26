@@ -23,6 +23,9 @@ public class CharacterController : MonoBehaviour
     public float interactionRange = 10f;
     private bool isLeftClicking = false;
 
+
+    bool moveWhenGrab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +41,7 @@ public class CharacterController : MonoBehaviour
         float m_sideway = Input.GetAxis("Horizontal") * speed;
         m_forward *= Time.deltaTime;
         m_sideway *= Time.deltaTime;
+        if (!moveWhenGrab) m_sideway = 0;
 
         transform.Translate(m_sideway, 0, m_forward);
 
@@ -47,27 +51,31 @@ public class CharacterController : MonoBehaviour
 
         if (Cursor.lockState != CursorLockMode.None)
         {
-            //get mouse mouvement
-            var mouse = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
-            mouse = Vector2.Scale(mouse, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
-            smoothVector.x = Mathf.Lerp(smoothVector.x, mouse.x, 1f / smoothing);
-            smoothVector.y = Mathf.Lerp(smoothVector.y, mouse.y, 1f / smoothing);
-            mouseLook += smoothVector;
+            if (moveWhenGrab)
+            {
+                //get mouse mouvement
+                var mouse = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+                mouse = Vector2.Scale(mouse, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
+                smoothVector.x = Mathf.Lerp(smoothVector.x, mouse.x, 1f / smoothing);
+                smoothVector.y = Mathf.Lerp(smoothVector.y, mouse.y, 1f / smoothing);
+                mouseLook += smoothVector;
 
-            //maximum angle Y
-            if (mouseLook.y < -70)
-                mouseLook.y = -70;
-            if (mouseLook.y > 40)
-                mouseLook.y = 40;
+                //maximum angle Y
+                if (mouseLook.y < -70)
+                    mouseLook.y = -70;
+                if (mouseLook.y > 40)
+                    mouseLook.y = 40;
 
             //rotation of camera
-            view.transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(-mouseLook.y, -30, 80), Vector3.right);
-            transform.localRotation = Quaternion.AngleAxis(mouseLook.x, transform.up);
-
+            
+                view.transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(-mouseLook.y, -30, 80), Vector3.right);
+                transform.localRotation = Quaternion.AngleAxis(mouseLook.x, transform.up);
+            }
             isLeftClicking = Input.GetMouseButton(0);
         }
-
+        moveWhenGrab = true;
         checkForObject();
+        
     }
     private void checkForObject()
     {
@@ -80,6 +88,10 @@ public class CharacterController : MonoBehaviour
         {
             Debug.DrawLine(foward.transform.position, hit.point, Color.red);
 
+            if (hit.collider.gameObject.GetComponent<Interactable>() != null && isLeftClicking)
+            {
+                moveWhenGrab = false;
+            }
 
             if (hit.collider.gameObject.GetComponent<Interactable>() != null)
             {
