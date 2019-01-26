@@ -110,20 +110,23 @@ public class CharacterController : MonoBehaviour
         {
             Debug.DrawLine(foward.transform.position, hit.point, Color.red);
 
-            if (hit.collider.gameObject.GetComponent<Interactable>() != null && isLeftClicking)
+            if (hit.collider.gameObject.GetComponent<Interactable>() is Climbable)
             {
-
+                hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, Input.GetKeyDown("space"));
             }
 
-            if (hit.collider.gameObject.GetComponent<Interactable>() != null)
+            else if (hit.collider.gameObject.GetComponent<Interactable>() is Pushable)
+            {
+                hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, Input.GetMouseButtonUp(0));
+            }
+
+            else if (hit.collider.gameObject.GetComponent<Interactable>() is Triggerable || hit.collider.gameObject.GetComponent<Interactable>() is Collectable)
             {
                 hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, isLeftClicking);
             }
 
-            if (hit.collider.gameObject.GetComponent<Interactable>() is Pushable)
-            {
-                hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, Input.GetMouseButtonUp(0));
-            }
+
+
 
         }
     }
