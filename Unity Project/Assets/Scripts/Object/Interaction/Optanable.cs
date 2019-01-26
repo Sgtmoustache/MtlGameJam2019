@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Optanable : Interactable
 {
-    public override void Interact()
+    public override void Interact(GameObject player, bool input)
     {
         throw new System.NotImplementedException();
     }

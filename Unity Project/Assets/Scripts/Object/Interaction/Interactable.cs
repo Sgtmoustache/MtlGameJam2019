@@ -4,5 +4,13 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    public abstract void Interact();
+    public abstract void Interact(GameObject player, bool input);
+
+    public void Start()
+    {
+    }
+    public void Update()
+    {
+
+    }
 }

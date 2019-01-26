@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Triggerable : Interactable
 {
-    public override void Interact()
+    public override void Interact(GameObject player, bool input)
     {
-        throw new System.NotImplementedException();
+        Debug.Log(input);
     }
 
     // Start is called before the first frame update
