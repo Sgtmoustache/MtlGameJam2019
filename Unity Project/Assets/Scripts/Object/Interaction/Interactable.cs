@@ -6,13 +6,13 @@ public abstract class Interactable : MonoBehaviour
 {
     public abstract void Interact(GameObject player, bool input);
     public abstract void OnStart();
-
+    public abstract void OnUpdate();
     public void Start()
     {
         OnStart();
     }
     public void Update()
     {
-
+        OnUpdate();
     }
 }

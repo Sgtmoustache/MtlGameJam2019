@@ -5,7 +5,6 @@ using UnityEngine;
 public class Triggerable : Interactable
 {
     public int objectID = -1;
-    private bool isAnimated = false;
     private bool isToggled = false;
 
     public override void Interact(GameObject player, bool input)
