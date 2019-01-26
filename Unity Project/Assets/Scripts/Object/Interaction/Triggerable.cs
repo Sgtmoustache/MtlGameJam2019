@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeleteMe : MonoBehaviour
+public class Triggerable : Interactable
 {
+    public override void Interact()
+    {
+        throw new System.NotImplementedException();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
