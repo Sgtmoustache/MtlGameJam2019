@@ -15,9 +15,6 @@ public class Pushable : Interactable
                 player.SendMessage("StopSideWay", false);
                 player.SendMessage("StopRotation", false);
 
-
-
-
                 if (Input.GetKeyDown("w"))
                 {
                     player.GetComponentInChildren<Animator>().SetBool("Push", true);

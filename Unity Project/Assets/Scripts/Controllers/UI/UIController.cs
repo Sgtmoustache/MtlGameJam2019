@@ -6,6 +6,14 @@ public class UIController : MonoBehaviour
 {
     public GameObject fader;
     public float fadeSpeed;
+
+    private bool isFading = false;
+
+    private void Update()
+    {
+        if(isFading)
+            fader.transform.Translate(Vector3.right * fadeSpeed);
+    }
     public void changeScene(string scenename)
     {
         //SceneManager.LoadScene(scenename);
@@ -19,10 +27,10 @@ public class UIController : MonoBehaviour
 
     private IEnumerator Fade(string sceneName, GameObject fadeOut)
     {
-        while (true)
-        {
-            fader.transform.Translate(Vector3.right * fadeSpeed);
-        }    }
+        isFading = true;
+        yield return new WaitUntil(() => fader.transform.position.x >= 80);
+        SceneManager.LoadScene(sceneName);
+    }
 
     public void exit(int exitCode = 0)
     {
