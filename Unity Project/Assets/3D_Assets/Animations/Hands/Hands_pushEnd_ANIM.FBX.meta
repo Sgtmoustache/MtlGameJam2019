@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: b8f33f4353571224e8073224e5716d43
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bn_Camera
+    100002: bn_Finger_ALT
+    100004: bn_Finger_ART
+    100006: bn_Finger_BLT
+    100008: bn_Finger_BRT
+    100010: bn_Finger_CLT
+    100012: bn_Finger_CRT
+    100014: bn_ForeArm_LT
+    100016: bn_ForeArm_RT
+    100018: bn_Hand_LT
+    100020: bn_Hand_nub
+    100022: bn_Hand_nub 1
+    100024: bn_Hand_RT
+    100026: bn_Index_ALT
+    100028: bn_Index_ART
+    100030: bn_Index_BLT
+    100032: bn_Index_BRT
+    100034: bn_Index_CLT
+    100036: bn_Index_CRT
+    100038: bn_Pinky_ALT
+    100040: bn_Pinky_ART
+    100042: bn_Pinky_BLT
+    100044: bn_Pinky_BRT
+    100046: bn_Pinky_CLT
+    100048: bn_Pinky_CLT 1
+    100050: bn_Pinky_CRT
+    100052: bn_Pinky_CRT 1
+    100054: bn_Ring_ALT
+    100056: bn_Ring_ART
+    100058: bn_Ring_BLT
+    100060: bn_Ring_BRT
+    100062: bn_Root
+    100064: bn_Thumb_ALT
+    100066: bn_Thumb_ART
+    100068: bn_Thumb_BLT
+    100070: bn_Thumb_BRT
+    100072: bn_Thumb_CLT
+    100074: bn_Thumb_CRT
+    100076: bn_UpperArm_LT
+    100078: bn_UpperArm_RT
+    100080: //RootNode
+    400000: bn_Camera
+    400002: bn_Finger_ALT
+    400004: bn_Finger_ART
+    400006: bn_Finger_BLT
+    400008: bn_Finger_BRT
+    400010: bn_Finger_CLT
+    400012: bn_Finger_CRT
+    400014: bn_ForeArm_LT
+    400016: bn_ForeArm_RT
+    400018: bn_Hand_LT
+    400020: bn_Hand_nub
+    400022: bn_Hand_nub 1
+    400024: bn_Hand_RT
+    400026: bn_Index_ALT
+    400028: bn_Index_ART
+    400030: bn_Index_BLT
+    400032: bn_Index_BRT
+    400034: bn_Index_CLT
+    400036: bn_Index_CRT
+    400038: bn_Pinky_ALT
+    400040: bn_Pinky_ART
+    400042: bn_Pinky_BLT
+    400044: bn_Pinky_BRT
+    400046: bn_Pinky_CLT
+    400048: bn_Pinky_CLT 1
+    400050: bn_Pinky_CRT
+    400052: bn_Pinky_CRT 1
+    400054: bn_Ring_ALT
+    400056: bn_Ring_ART
+    400058: bn_Ring_BLT
+    400060: bn_Ring_BRT
+    400062: bn_Root
+    400064: bn_Thumb_ALT
+    400066: bn_Thumb_ART
+    400068: bn_Thumb_BLT
+    400070: bn_Thumb_BRT
+    400072: bn_Thumb_CLT
+    400074: bn_Thumb_CRT
+    400076: bn_UpperArm_LT
+    400078: bn_UpperArm_RT
+    400080: //RootNode
+    7400000: Hands_pushEnd_ANIM
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: bn_Root
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Hands_pushEnd_ANIM
+      takeName: Take 001
+      firstFrame: 61
+      lastFrame: 81
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: bn_Root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b5a4f7129b4559241aa06bf4eded7c86,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
