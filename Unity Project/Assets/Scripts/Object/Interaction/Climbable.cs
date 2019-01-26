@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class Climbable : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Interact(GameObject player, bool input)
     {
 
     }
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-    public override void Interact()
+    public override void OnStart()
     {
-
     }
 }

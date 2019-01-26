@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class Pushable : Interactable
 {
-    public override void Interact()
+    public override void Interact(GameObject player, bool input)
     {
         throw new System.NotImplementedException();
     }
 
-
-    // Start is called before the first frame update
-    void Start()
+    public override void OnStart()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        throw new System.NotImplementedException();
     }
 }
