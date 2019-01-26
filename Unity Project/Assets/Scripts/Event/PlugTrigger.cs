@@ -2,27 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightTrigger : TriggerObject
+public class PlugTrigger: TriggerObject
 {
-    public Light light;
-    public float intensity;
-    public bool isOpen = false;
+
+    public bool hasNightLight;
 
     public override void TriggerEffect(GameObject player = null)
     {
-        if (currentCount < triggerCount || triggerCount <= 0)
+
+        if (Inventory.HasNightlight() || hasNightLight)
         {
-            isOpen = !isOpen;
-            light.enabled = isOpen;
+            if (hasNightLight) Debug.Log("Enfant Jesus");
+            hasNightLight = !hasNightLight;
+            Inventory.ChangeNight();
         }
     }
+
 
     // Start is called before the first frame update
     void Start()
     {
-        light.intensity = intensity;
-        light.enabled = isOpen;
+        hasNightLight = false;
     }
+
+   
 
     // Update is called once per frame
     void Update()

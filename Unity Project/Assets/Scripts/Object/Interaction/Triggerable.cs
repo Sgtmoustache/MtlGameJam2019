@@ -28,10 +28,9 @@ public class Triggerable : Interactable
                     }
 
                     //If has a TriggerObject component.
-                    var triggerObject = GetComponent<TriggerObject>();
-                    if (triggerObject != null)
+                    foreach (TriggerObject trigger in GetComponents<TriggerObject>())
                     {
-                        triggerObject.TriggerEffect();
+                        trigger.TriggerEffect(player);
                     }
                 }
             }
