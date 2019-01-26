@@ -8,8 +8,11 @@ public class SoundEffectTrigger : TriggerObject
 
     [Range(0,1)]
     public float volume;
-    public override void TriggerEffect()
+    public override void TriggerEffect(GameObject player = null)
     {
-        GetComponent<AudioSource>().PlayOneShot(soundEffect,volume);
+        if (currentCount < triggerCount || triggerCount <= 0)
+        {
+            GetComponent<AudioSource>().PlayOneShot(soundEffect, volume);
+        }
     }
 }

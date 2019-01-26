@@ -8,10 +8,13 @@ public class LightTrigger : TriggerObject
     public float intensity;
     public bool isOpen = false;
 
-    public override void TriggerEffect()
+    public override void TriggerEffect(GameObject player = null)
     {
-        isOpen = !isOpen;
-        light.enabled = isOpen;
+        if (currentCount < triggerCount || triggerCount <= 0)
+        {
+            isOpen = !isOpen;
+            light.enabled = isOpen;
+        }
     }
 
     // Start is called before the first frame update
