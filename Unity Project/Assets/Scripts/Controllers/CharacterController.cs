@@ -86,7 +86,7 @@ public class CharacterController : MonoBehaviour
     private void checkForObject()
     {
         RaycastHit hit;
-        Debug.DrawRay(transform.position, transform.forward,Color.red);
+        Debug.DrawRay(transform.position, transform.forward, Color.red);
 
         Ray ray = new Ray(foward.transform.position, Camera.main.transform.forward);
 
@@ -103,6 +103,12 @@ public class CharacterController : MonoBehaviour
             {
                 hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, isLeftClicking);
             }
+
+            if (hit.collider.gameObject.GetComponent<Interactable>() is Pushable)
+            {
+                hit.collider.gameObject.GetComponent<Interactable>().Interact(gameObject, Input.GetMouseButtonUp(0));
+            }
+
         }
     }
 }
