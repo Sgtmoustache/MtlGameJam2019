@@ -47,6 +47,29 @@ public class SanityController : MonoBehaviour
         Rate();
     }
 
+
+    public IEnumerable Shake (float duration, float magnitude)
+    {
+        Vector3 originalPos = head.transform.parent.position;
+
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * magnitude;
+            float y = Random.Range(-1f, 1f) * magnitude;
+
+            head.transform.parent.position = new Vector3(x, y, originalPos.z);
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+
+        }
+
+        head.transform.parent.position = originalPos;
+    }
+
     public void Rate()
     {
         currentSanity = currentSanity + ((lightIntensity) - 5) * 0.1;
@@ -67,6 +90,8 @@ public class SanityController : MonoBehaviour
         if (currentSanity < 35)
         {
             //Signal the player that he is dying
+            Shake(20, 3);
+            Debug.Log("shake");
         }
 
         if (currentSanity <= 0 && !isDead)
