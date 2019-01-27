@@ -6,6 +6,7 @@ public class Pushable : Interactable
 {
     public AudioClip DragingSound;
     private AudioSource audioSource;
+    public Joint joint;
 
     public override void Interact(GameObject player, bool input)
     {
@@ -15,10 +16,18 @@ public class Pushable : Interactable
 
             if (input)
             {
+
                 currentActive = TypeOfAction.PUSHABLE;
                 player.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
 
-                transform.parent = player.transform;
+                if (joint != null)
+                {
+                    joint = player.gameObject.AddComponent<FixedJoint>();
+                    joint.connectedBody = GetComponent<Rigidbody>();
+                }
+                    
+                    // transform.parent = player.transform;
+
                 RaycastHit hit;
 
                 Vector3 Direction = Vector3.Normalize(transform.position - player.transform.GetChild(3).transform.position);
@@ -62,6 +71,7 @@ public class Pushable : Interactable
             }
             if (!input)
             {
+                Destroy(player.GetComponent<ConfigurableJoint>());
                 currentActive = TypeOfAction.NOTHING;
                 player.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
                 GetComponent<Rigidbody>().isKinematic = false;
