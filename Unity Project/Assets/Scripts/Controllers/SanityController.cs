@@ -18,11 +18,14 @@ public class SanityController : MonoBehaviour
 
     public bool isDead;
 
- 
+    private AudioSource audioSource;
+    public AudioClip heartSound;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponents<AudioSource>()[2];
         ps = GameObject.Find("Fog").GetComponent<ParticleSystem>();
         currentSanity = startingSanity;
         lights = GameObject.FindGameObjectsWithTag("Light");
@@ -100,7 +103,15 @@ public class SanityController : MonoBehaviour
 
         if (lightIntensity < 5)
         {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
             //Signal the player that he fears the dark
+        }
+        else
+        {
+            audioSource.Stop();
         }
 
         if (currentSanity < 35)
