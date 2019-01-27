@@ -13,32 +13,32 @@ public class Pushable : Interactable
         {
             if (input)
             {
-
                 transform.parent = player.transform;
+
                 player.SendMessage("StopSideWay", false);
                 player.SendMessage("StopRotation", false);
 
-                if (Input.GetKeyDown("w"))
+                if (Input.GetKey("w"))
                 {
                     player.GetComponentInChildren<Animator>().SetBool("Push", true);
                     Debug.Log("You pushed " + gameObject.name);
                     if(!audioSource.isPlaying)
                         audioSource.Play();
                 }
-                if (Input.GetKeyUp("w"))
+                if (!Input.GetKey("w"))
                 {
                     player.GetComponentInChildren<Animator>().SetBool("Push", false);
                     Debug.Log("You stop pushing " + gameObject.name);
                     audioSource.Stop();
                 }
-                if (Input.GetKeyDown("s"))
+                if (Input.GetKey("s"))
                 {
                     player.GetComponentInChildren<Animator>().SetBool("Pull", true);
                     Debug.Log("You pulled " + gameObject.name);
                     if (!audioSource.isPlaying)
                         audioSource.Play();
                 }
-                if (Input.GetKeyUp("s"))
+                if (!Input.GetKey("s"))
                 {
                     player.GetComponentInChildren<Animator>().SetBool("Pull", false);
                     Debug.Log("You stop pulling " + gameObject.name);
