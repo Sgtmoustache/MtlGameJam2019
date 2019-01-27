@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: -1
+  isToggled: 0
   AnimationSound: {fileID: 0}
   audioDelay: 0
 --- !u!114 &332997548
@@ -304,7 +305,7 @@ GameObject:
   - component: {fileID: 1469277709}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

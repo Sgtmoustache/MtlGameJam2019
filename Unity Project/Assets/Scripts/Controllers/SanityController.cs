@@ -79,7 +79,7 @@ public class SanityController : MonoBehaviour
         //changer ici pour ajustement 
         if (Time.timeScale != 0f) {
             currentSanity = currentSanity + ((lightIntensity) - 5) * 0.06;
-            //currentSanity = 100; //A enlever
+            currentSanity = 100; //A enlever
         }
         if (currentSanity >= 100)
         {

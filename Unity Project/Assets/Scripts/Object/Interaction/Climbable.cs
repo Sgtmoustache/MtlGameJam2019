@@ -16,7 +16,7 @@ public class Climbable : Interactable
 
     private float height;
     private float distance;
-    public float soundDelay;
+    public float soundDelay = 0.7f;
 
     private Vector2 travel;
     public AudioClip climbingSound;
@@ -63,7 +63,7 @@ public class Climbable : Interactable
         yield return new WaitForSeconds(soundDelay);
         if (climbingSound != null && !audioSource.isPlaying)
             audioSource.PlayOneShot(climbingSound);
-        yield return new WaitForSeconds(soundDelay-1);
+        yield return new WaitForSeconds(0.6f-soundDelay);
 
         RaycastHit hit;
         Ray rayFeet = new Ray(player.transform.GetChild(3).transform.position, player.transform.forward);
@@ -93,8 +93,7 @@ public class Climbable : Interactable
     }
 
     void Update()
-    {
-        Debug.Log("travel : " + travel);
+    { 
         if (move_up)
         {
             player.transform.Translate(0, 0.05f, 0);
