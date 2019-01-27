@@ -28,12 +28,13 @@ public class Climbable : Interactable
             player = character;
             height = GetComponent<Collider>().bounds.size.y + transform.position.y - player.transform.position.y + 1;
             if (this.gameObject.tag.Equals("Cube"))
-                height = GetComponent<Collider>().bounds.size.y / 2 + transform.position.y - player.transform.position.y + 1;
+                height = GetComponent<Collider>().bounds.size.y / 2 + transform.position.y - player.transform.position.y + 1 + 0.1f;
 
             Debug.Log("hauteur  :" + height);
 
             if (height <= 1.1 && height > 0.30)
             {
+                
                 Climb();
             }
             first_pass = false;
