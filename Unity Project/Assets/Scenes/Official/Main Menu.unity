@@ -734,7 +734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fader: {fileID: 145805282}
-  fadeSpeed: 3
+  fadeSpeed: 6
   fadeSound: {fileID: 0}
   buttonPress: {fileID: 8300000, guid: 28aed37c08e41374696c844e5ad5ea2a, type: 3}
 --- !u!82 &988845049
