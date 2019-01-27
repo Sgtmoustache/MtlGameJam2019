@@ -53,6 +53,7 @@ public class Climbable : Interactable
 
     public void Climb()
     {
+        player.GetComponentInChildren<Animator>().SetBool("Climb", true);
         RaycastHit hit;
         Ray rayFeet = new Ray(player.transform.GetChild(3).transform.position, player.transform.forward);
         Physics.Raycast(rayFeet, out hit, 1);

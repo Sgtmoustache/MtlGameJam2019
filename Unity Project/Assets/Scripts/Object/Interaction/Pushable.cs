@@ -13,8 +13,9 @@ public class Pushable : Interactable
         {
             if (input)
             {
-                GetComponent<Rigidbody>().isKinematic = true;
+                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None & RigidbodyConstraints.FreezePositionZ & RigidbodyConstraints.FreezeRotation;
                 transform.parent = player.transform;
+                
 
                 RaycastHit hit;
 
@@ -23,7 +24,6 @@ public class Pushable : Interactable
 
                 if (Physics.Raycast(rayFeet, out hit, 3))
                 {
-
                     Vector3 test = (transform.position + Direction * (2f - Vector3.Distance(player.transform.position, hit.point)));
                     transform.position = new Vector3(test.x, 0, test.z);
                 }
