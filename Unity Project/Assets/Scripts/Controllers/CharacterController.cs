@@ -51,7 +51,6 @@ public class CharacterController : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1f;
-        pause = true;
         Cursor.lockState = CursorLockMode.Locked;
         pause = true;
         gateForward = true;
@@ -78,15 +77,6 @@ public class CharacterController : MonoBehaviour
                 Pmenu.SetActive(true);
                 Time.timeScale = 0f;
             }    
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                pause = true;
-                gateForward = true;
-                gateSideway = true;
-                gateRotation = true;
-                Pmenu.SetActive(false);
-            }
                 
         }
         
