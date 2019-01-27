@@ -11,6 +11,8 @@ public class CharacterController : MonoBehaviour
     public GameObject foward;
     public GameObject hands;
     public GameObject feets;
+    public GameObject liftPosition;
+
     //CamLook
     Vector2 mouseLook;
     Vector2 smoothVector;
