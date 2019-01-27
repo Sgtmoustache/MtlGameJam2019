@@ -93,8 +93,7 @@ public class Climbable : Interactable
     }
 
     void Update()
-    {
-        Debug.Log("travel : " + travel);
+    { 
         if (move_up)
         {
             player.transform.Translate(0, 0.05f, 0);
