@@ -6,6 +6,7 @@ public class Pushable : Interactable
 {
     public AudioClip DragingSound;
     private AudioSource audioSource;
+    public Joint joint;
 
     private bool first_pass;
 
@@ -60,6 +61,7 @@ public class Pushable : Interactable
             }
             if (!input)
             {
+                Destroy(player.GetComponent<ConfigurableJoint>());
                 currentActive = TypeOfAction.NOTHING;
                 player.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
                 GetComponent<Rigidbody>().isKinematic = false;
