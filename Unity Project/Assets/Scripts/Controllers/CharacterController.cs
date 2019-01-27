@@ -145,6 +145,8 @@ public class CharacterController : MonoBehaviour
 
     private void checkForObject()
     {
+
+        int count = 0;
         RaycastHit hit;
 
         Ray rayFeet = new Ray(feets.transform.position, transform.forward);
@@ -152,9 +154,13 @@ public class CharacterController : MonoBehaviour
         if (Physics.Raycast(rayFeet, out hit, interactionRange))
         {
             Debug.DrawLine(transform.position, hit.point, Color.red);
-
+            
             foreach (Interactable interactable in hit.collider.gameObject.GetComponents<Interactable>())
             {
+                if (Interactable.currentActive == TypeOfAction.NOTHING) {
+                    GetComponentInChildren<Animator>().SetBool("Interact", true);
+                }
+
                 if (interactable is Climbable && Input.GetKey("space") && (Interactable.currentActive == TypeOfAction.NOTHING || Interactable.currentActive == TypeOfAction.CLIMABLE))
                 {
                     Debug.Log("try to climb");
@@ -166,8 +172,10 @@ public class CharacterController : MonoBehaviour
                     Debug.Log("try to push");
                     interactable.Interact(gameObject, Input.GetMouseButton(0));
                 }
+                count++;
             }
         }
+       
 
         Ray rayFoward = new Ray(foward.transform.position, Camera.main.transform.forward);
 
@@ -176,12 +184,23 @@ public class CharacterController : MonoBehaviour
             Debug.DrawLine(foward.transform.position, hit.point, Color.blue);
             foreach (Interactable interactable in hit.collider.gameObject.GetComponents<Interactable>())
             {
+
+                if (Interactable.currentActive == TypeOfAction.NOTHING)
+                {
+                    GetComponentInChildren<Animator>().SetBool("Interact", true);
+                }
                 if ((interactable is Triggerable || interactable is Collectable || interactable is Pickable) && Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("try something");
                     interactable.Interact(gameObject, Input.GetMouseButton(0));
                 }
+                count++;
             }
         }
+        
+           if(count == 0) 
+                GetComponentInChildren<Animator>().SetBool("Interact", false);
+            
+        
     }
 }
