@@ -3941,7 +3941,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258461136}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.71, y: 0.405, z: 2.452}
+  m_LocalPosition: {x: 1.71, y: 0.277, z: 2.452}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1706833825}
@@ -3972,7 +3972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d1707cc63518b4fadf5da884a85f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerCount: 0
+  triggerCount: 1
   collisionTrigger: 0
   force: 177
   ImpactSound: {fileID: 8300000, guid: f79ae1c12acbed248a0cb1176c60d6ac, type: 3}
@@ -6739,7 +6739,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036206946}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.71, y: 0.405, z: 2.452}
+  m_LocalPosition: {x: 1.733, y: 0.28, z: 2.452}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 991117309}
@@ -6770,7 +6770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d1707cc63518b4fadf5da884a85f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerCount: 0
+  triggerCount: 1
   collisionTrigger: 0
   force: 177
   ImpactSound: {fileID: 8300000, guid: f79ae1c12acbed248a0cb1176c60d6ac, type: 3}
