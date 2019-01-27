@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
@@ -7530,6 +7531,11 @@ Transform:
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &2667861084276871987
+=======
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3993139042657488563
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7537,20 +7543,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 8806469284922175544}
   m_Layer: 0
   m_Name: Hands
+=======
+  - component: {fileID: 3993139042657488562}
+  m_Layer: 0
+  m_Name: Feets
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &8806469284922175544
+=======
+--- !u!4 &3993139042657488562
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 2667861084276871987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -7560,6 +7577,17 @@ Transform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441074840920057
+=======
+  m_GameObject: {fileID: 3993139042657488563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.96, z: 0.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139043398471179}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139042675410294
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7567,20 +7595,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441074840920058}
   m_Layer: 0
   m_Name: bn_Pinky_CLT 1
+=======
+  - component: {fileID: 3993139042675410289}
+  m_Layer: 0
+  m_Name: bn_UpperArm_RT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441074840920058
+=======
+--- !u!4 &3993139042675410289
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441074840920057}
   m_LocalRotation: {x: -0.00000003911605, y: 0.0000007152556, z: 0.0000007078051,
     w: 1}
@@ -7591,6 +7630,18 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441074887524106
+=======
+  m_GameObject: {fileID: 3993139042675410294}
+  m_LocalRotation: {x: 0.6276754, y: 0.004662626, z: 0.7784392, w: 0.005850569}
+  m_LocalPosition: {x: 0.12563974, y: 0.00012885095, z: -0.078706965}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139044678730682}
+  m_Father: {fileID: 3993139043241323279}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139042687318155
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7598,20 +7649,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441074887524107}
   m_Layer: 0
   m_Name: bn_Finger_CLT
+=======
+  - component: {fileID: 3993139042687318154}
+  m_Layer: 0
+  m_Name: bn_Index_ART
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441074887524107
+=======
+--- !u!4 &3993139042687318154
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441074887524106}
   m_LocalRotation: {x: -0.00000045530868, y: -0.021554453, z: 0.00000022865774, w: 0.99976766}
   m_LocalPosition: {x: -0.010795364, y: -0.000000114440915, z: -0.000000076293944}
@@ -7621,6 +7683,18 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441074906996151
+=======
+  m_GameObject: {fileID: 3993139042687318155}
+  m_LocalRotation: {x: 0.0061429394, y: -0.0887846, z: 0.09742577, w: 0.9912557}
+  m_LocalPosition: {x: -0.039434165, y: 0.0067292782, z: 0.0023851776}
+  m_LocalScale: {x: 1, y: 1, z: 1.000001}
+  m_Children:
+  - {fileID: 3993139044322140177}
+  m_Father: {fileID: 3993139044641363865}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139042691623952
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7628,20 +7702,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441074906996144}
   m_Layer: 0
   m_Name: bn_Pinky_CRT 1
+=======
+  - component: {fileID: 3993139042691623955}
+  m_Layer: 0
+  m_Name: bn_Pinky_CLT 1
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441074906996144
+=======
+--- !u!4 &3993139042691623955
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441074906996151}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.01050415, y: 0.0000001335144, z: 0}
@@ -7651,6 +7736,18 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441074936088856
+=======
+  m_GameObject: {fileID: 3993139042691623952}
+  m_LocalRotation: {x: -0.00000003911605, y: 0.0000007152556, z: 0.0000007078051,
+    w: 1}
+  m_LocalPosition: {x: -0.01050415, y: -0.00000015258789, z: -0.000000114440915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139043330303830}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139042700719565
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7658,20 +7755,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441074936088857}
   m_Layer: 0
   m_Name: bn_Index_BRT
+=======
+  - component: {fileID: 3993139042700719564}
+  m_Layer: 0
+  m_Name: Head
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441074936088857
+=======
+--- !u!4 &3993139042700719564
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441074936088856}
   m_LocalRotation: {x: -0.0000019066672, y: -0.022132711, z: -0.000000037552297, w: 0.9997551}
   m_LocalPosition: {x: -0.016782073, y: 0.0000003504753, z: 0}
@@ -7682,6 +7790,17 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441074945598211
+=======
+  m_GameObject: {fileID: 3993139042700719565}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.262, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139043398471179}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139042701955127
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7689,20 +7808,32 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441074945598220}
   m_Layer: 0
   m_Name: bn_Finger_CRT
+=======
+  - component: {fileID: 3993139042701955121}
+  - component: {fileID: 3993139042701955126}
+  m_Layer: 0
+  m_Name: Hand_Asset
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441074945598220
+=======
+--- !u!4 &3993139042701955121
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441074945598211}
   m_LocalRotation: {x: 0.000000014015711, y: -0.021554353, z: -0.0000000034239864,
     w: 0.99976766}
@@ -7713,6 +7844,38 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441074947709821
+=======
+  m_GameObject: {fileID: 3993139042701955127}
+  m_LocalRotation: {x: -0.14610043, y: -0, z: -0, w: 0.9892698}
+  m_LocalPosition: {x: 0, y: -1.09, z: 0.287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043061110844}
+  - {fileID: 3993139044372426805}
+  m_Father: {fileID: 3993139043857355530}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -16.802, y: 0, z: 0}
+--- !u!95 &3993139042701955126
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993139042701955127}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: b5a4f7129b4559241aa06bf4eded7c86, type: 3}
+  m_Controller: {fileID: 9100000, guid: 43063ede7c1c40b4ebc42a060dc4031a, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &3993139042833397646
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7720,23 +7883,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441074947709822}
   - component: {fileID: 3587441074947709817}
   - component: {fileID: 3587441074947709816}
   - component: {fileID: 3587441074947709823}
   m_Layer: 5
   m_Name: Quit
+=======
+  - component: {fileID: 3993139042833397641}
+  m_Layer: 0
+  m_Name: bn_Thumb_CLT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!224 &3587441074947709822
 RectTransform:
+=======
+--- !u!4 &3993139042833397641
+Transform:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441074947709821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -7761,10 +7936,23 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!114 &3587441074947709816
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 3993139042833397646}
+  m_LocalRotation: {x: 0.000002326059, y: 0.000001732756, z: -0.090959385, w: 0.9958546}
+  m_LocalPosition: {x: -0.012709656, y: -0.000000019073486, z: -0.00000017166137}
+  m_LocalScale: {x: 1.000001, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139043600669419}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139042900343052
+GameObject:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441074947709821}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7790,10 +7978,25 @@ MonoBehaviour:
   m_UseSpriteMesh: 0
 --- !u!114 &3587441074947709823
 MonoBehaviour:
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3993139042900343055}
+  m_Layer: 0
+  m_Name: bn_Pinky_CRT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3993139042900343055
+Transform:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441074947709821}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7842,6 +8045,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &3587441075047921883
+=======
+  m_GameObject: {fileID: 3993139042900343052}
+  m_LocalRotation: {x: -0.0000028556685, y: 0.0000011939551, z: 0.0000002533232, w: 1}
+  m_LocalPosition: {x: -0.008509979, y: -0.000000028610229, z: -0.000000019073486}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139043043282917}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139042913239094
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7849,23 +8063,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075047921828}
   - component: {fileID: 3587441075047921831}
   - component: {fileID: 3587441075047921830}
   - component: {fileID: 3587441075047921829}
   m_Layer: 5
   m_Name: Text
+=======
+  - component: {fileID: 3993139042913239089}
+  m_Layer: 0
+  m_Name: bn_Index_CRT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!224 &3587441075047921828
 RectTransform:
+=======
+--- !u!4 &3993139042913239089
+Transform:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075047921883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -7889,10 +8115,23 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!114 &3587441075047921830
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 3993139042913239094}
+  m_LocalRotation: {x: -1.4849172e-10, y: -0.027037403, z: -0.000000002799006, w: 0.99963444}
+  m_LocalPosition: {x: -0.010028228, y: 0.000000007152557, z: -0.000000019073486}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139044322140177}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139042998995533
+GameObject:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075047921883}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7923,10 +8162,25 @@ MonoBehaviour:
   m_Text: QUIT
 --- !u!114 &3587441075047921829
 MonoBehaviour:
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3993139042998995532}
+  m_Layer: 0
+  m_Name: bn_Thumb_BRT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3993139042998995532
+Transform:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075047921883}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7937,6 +8191,18 @@ MonoBehaviour:
   m_EffectDistance: {x: 4, y: -4}
   m_UseGraphicAlpha: 1
 --- !u!1 &3587441075095711243
+=======
+  m_GameObject: {fileID: 3993139042998995533}
+  m_LocalRotation: {x: -0.0000015587161, y: 0.0000013515833, z: 0.2380905, w: 0.971243}
+  m_LocalPosition: {x: -0.014672851, y: -0.000000038146972, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139044475048176}
+  m_Father: {fileID: 3993139043671186428}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043043282922
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7944,20 +8210,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075095711252}
   m_Layer: 0
   m_Name: Feets
+=======
+  - component: {fileID: 3993139043043282917}
+  m_Layer: 0
+  m_Name: bn_Pinky_BRT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075095711252
+=======
+--- !u!4 &3993139043043282917
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075095711243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.96, z: 0.32}
@@ -7967,6 +8244,18 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075106754231
+=======
+  m_GameObject: {fileID: 3993139043043282922}
+  m_LocalRotation: {x: -0.0000012987292, y: -9.313417e-10, z: 0.000000014901157, w: 1}
+  m_LocalPosition: {x: -0.01351799, y: -0.000000009536743, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139042900343055}
+  m_Father: {fileID: 3993139044650647566}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043061110845
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7974,20 +8263,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075106754224}
   m_Layer: 0
   m_Name: bn_Finger_ALT
+=======
+  - component: {fileID: 3993139043061110844}
+  m_Layer: 0
+  m_Name: bn_Root
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075106754224
+=======
+--- !u!4 &3993139043061110844
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075106754231}
   m_LocalRotation: {x: -0.05917747, y: -0.097454876, z: -0.12543799, w: 0.98552823}
   m_LocalPosition: {x: -0.03788082, y: 0.004064035, z: 0.0013759232}
@@ -7998,6 +8298,18 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075153815687
+=======
+  m_GameObject: {fileID: 3993139043061110845}
+  m_LocalRotation: {x: -0.7070938, y: -0.004291, z: 0.004291, w: 0.7070938}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043241323279}
+  m_Father: {fileID: 3993139042701955121}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043113455937
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8005,23 +8317,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075153815680}
   - component: {fileID: 3587441075153815683}
   - component: {fileID: 3587441075153815682}
   - component: {fileID: 3587441075153815681}
   m_Layer: 5
   m_Name: Text
+=======
+  - component: {fileID: 3993139043113455936}
+  m_Layer: 0
+  m_Name: bn_Finger_BLT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!224 &3587441075153815680
 RectTransform:
+=======
+--- !u!4 &3993139043113455936
+Transform:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075153815687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -8045,10 +8369,24 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!114 &3587441075153815682
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 3993139043113455937}
+  m_LocalRotation: {x: -0.0000016913101, y: -0.014797052, z: -0.0000002411197, w: 0.99989057}
+  m_LocalPosition: {x: -0.016229706, y: -0.000000009536743, z: 0.000000076293944}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043586746089}
+  m_Father: {fileID: 3993139044551717219}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043213325859
+GameObject:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075153815687}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -8079,10 +8417,25 @@ MonoBehaviour:
   m_Text: RESUME
 --- !u!114 &3587441075153815681
 MonoBehaviour:
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3993139043213325858}
+  m_Layer: 0
+  m_Name: bn_Index_CLT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3993139043213325858
+Transform:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075153815687}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -8093,6 +8446,18 @@ MonoBehaviour:
   m_EffectDistance: {x: 4, y: -4}
   m_UseGraphicAlpha: 1
 --- !u!1 &3587441075178004963
+=======
+  m_GameObject: {fileID: 3993139043213325859}
+  m_LocalRotation: {x: -0.00000022363952, y: -0.027036991, z: -0.0000000041854253,
+    w: 0.99963444}
+  m_LocalPosition: {x: -0.0100283045, y: -0.000000019073486, z: -0.0000001335144}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139043558904057}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043241323276
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8100,20 +8465,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075178004972}
   m_Layer: 0
   m_Name: bn_Thumb_BRT
+=======
+  - component: {fileID: 3993139043241323279}
+  m_Layer: 0
+  m_Name: bn_Camera
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075178004972
+=======
+--- !u!4 &3993139043241323279
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075178004963}
   m_LocalRotation: {x: -0.0000015587161, y: 0.0000013515833, z: 0.2380905, w: 0.971243}
   m_LocalPosition: {x: -0.014672851, y: -0.000000038146972, z: 0}
@@ -8124,6 +8500,19 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075194362317
+=======
+  m_GameObject: {fileID: 3993139043241323276}
+  m_LocalRotation: {x: -1.4223733e-14, y: 0.006068391, z: -4.1329284e-16, w: 0.9999816}
+  m_LocalPosition: {x: 0.012136558, y: 0, z: 0.99992645}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139044712905917}
+  - {fileID: 3993139042675410289}
+  m_Father: {fileID: 3993139043061110844}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043327510658
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8131,20 +8520,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075194362318}
   m_Layer: 0
   m_Name: bn_Hand_LT
+=======
+  - component: {fileID: 3993139043327510781}
+  m_Layer: 0
+  m_Name: bn_Pinky_ALT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075194362318
+=======
+--- !u!4 &3993139043327510781
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075194362317}
   m_LocalRotation: {x: 0.0000003613531, y: 0.0000011548401, z: 0.00000003725249, w: 1}
   m_LocalPosition: {x: -0.09752022, y: 0, z: 0}
@@ -8159,6 +8559,18 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075199076204
+=======
+  m_GameObject: {fileID: 3993139043327510658}
+  m_LocalRotation: {x: -0.080422774, y: -0.09903613, z: -0.18833773, w: 0.9737828}
+  m_LocalPosition: {x: -0.029346542, y: 0.020860624, z: -0.008330078}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043724326919}
+  m_Father: {fileID: 3993139043561553658}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043330303831
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8166,20 +8578,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075199076205}
   m_Layer: 0
   m_Name: bn_Ring_ALT
+=======
+  - component: {fileID: 3993139043330303830}
+  m_Layer: 0
+  m_Name: bn_Ring_BLT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075199076205
+=======
+--- !u!4 &3993139043330303830
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075199076204}
   m_LocalRotation: {x: -0.15366158, y: -0.08894396, z: -0.16815367, w: 0.9696399}
   m_LocalPosition: {x: -0.036321715, y: 0.012794981, z: -0.0055501745}
@@ -8190,6 +8613,18 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075221860326
+=======
+  m_GameObject: {fileID: 3993139043330303831}
+  m_LocalRotation: {x: -0.0000009712239, y: -0.0000006843584, z: -0.0068978383, w: 0.9999762}
+  m_LocalPosition: {x: -0.014027252, y: -0.000000009536743, z: 0.000000076293944}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139042691623955}
+  m_Father: {fileID: 3993139044494839000}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043398471184
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8197,6 +8632,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075221860335}
   - component: {fileID: 3587441075221860334}
   - component: {fileID: 3587441075221860333}
@@ -8206,6 +8642,17 @@ GameObject:
   - component: {fileID: 3587441075221860321}
   - component: {fileID: 3587441075221860320}
   - component: {fileID: 3587441075221860327}
+=======
+  - component: {fileID: 3993139043398471179}
+  - component: {fileID: 3993139043398471176}
+  - component: {fileID: 3993139043398471177}
+  - component: {fileID: 3993139043398471182}
+  - component: {fileID: 3993139043398471183}
+  - component: {fileID: 3993139043398471180}
+  - component: {fileID: 3993139043398471181}
+  - component: {fileID: 3993139043398471186}
+  - component: {fileID: 3993139043398471187}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -8213,17 +8660,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075221860335
+=======
+--- !u!4 &3993139043398471179
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075221860326}
+=======
+  m_GameObject: {fileID: 3993139043398471184}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_LocalRotation: {x: -0, y: 0.86602443, z: -0, w: 0.5000018}
   m_LocalPosition: {x: -4.77, y: 2.05, z: 8.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 3587441075545261771}
   - {fileID: 3587441076677559284}
   - {fileID: 3587441076569624733}
@@ -8234,20 +8690,40 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 120.00001, z: 0}
 --- !u!33 &3587441075221860334
+=======
+  - {fileID: 3993139043857355530}
+  - {fileID: 3993139044576151881}
+  - {fileID: 3993139042700719564}
+  - {fileID: 3993139042657488562}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 120.00001, z: 0}
+--- !u!33 &3993139043398471176
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075221860326}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &3587441075221860333
+=======
+  m_GameObject: {fileID: 3993139043398471184}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3993139043398471177
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075221860326}
+=======
+  m_GameObject: {fileID: 3993139043398471184}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 1
@@ -8278,13 +8754,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!136 &3587441075221860332
+=======
+--- !u!136 &3993139043398471182
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075221860326}
+=======
+  m_GameObject: {fileID: 3993139043398471184}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -8292,13 +8776,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!54 &3587441075221860323
+=======
+--- !u!54 &3993139043398471183
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075221860326}
+=======
+  m_GameObject: {fileID: 3993139043398471184}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -8308,40 +8800,66 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+<<<<<<< HEAD
 --- !u!114 &3587441075221860322
+=======
+--- !u!114 &3993139043398471180
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075221860326}
+=======
+  m_GameObject: {fileID: 3993139043398471184}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 898403e24ba9b364aa5d7c4bfe2ae4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+<<<<<<< HEAD
   foward: {fileID: 3587441076677559275}
   hands: {fileID: 3587441075908598029}
   feets: {fileID: 3587441075095711243}
+=======
+  foward: {fileID: 3993139044576151886}
+  hands: {fileID: 3993139042701955127}
+  feets: {fileID: 3993139042657488563}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   sensitivity: 1
   smoothing: 2
   pauseSound: {fileID: 8300000, guid: 28aed37c08e41374696c844e5ad5ea2a, type: 3}
   walkingSound: {fileID: 8300000, guid: 509c13ff446b47640ab4c5c6f5bd56f2, type: 3}
   interactionRange: 0.8
+<<<<<<< HEAD
 --- !u!114 &3587441075221860321
+=======
+--- !u!114 &3993139043398471181
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075221860326}
+=======
+  m_GameObject: {fileID: 3993139043398471184}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84875312fecff154e891a217d2f58851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   head: {fileID: 3587441076569624732}
+=======
+  head: {fileID: 3993139042700719565}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   startingSanity: 100
   currentSanity: 0
   lightIntensity: 0
@@ -8366,13 +8884,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+<<<<<<< HEAD
 --- !u!82 &3587441075221860320
+=======
+--- !u!82 &3993139043398471186
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075221860326}
+=======
+  m_GameObject: {fileID: 3993139043398471184}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -8462,13 +8988,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!82 &3587441075221860327
+=======
+--- !u!82 &3993139043398471187
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075221860326}
+=======
+  m_GameObject: {fileID: 3993139043398471184}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -8558,7 +9092,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!1 &3587441075306581138
+=======
+--- !u!1 &3993139043536269048
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8566,20 +9104,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075306581139}
   m_Layer: 0
   m_Name: bn_Pinky_ART
+=======
+  - component: {fileID: 3993139043536269051}
+  m_Layer: 0
+  m_Name: bn_ForeArm_LT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075306581139
+=======
+--- !u!4 &3993139043536269051
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075306581138}
   m_LocalRotation: {x: 0.08042316, y: -0.0990356, z: 0.18833832, w: 0.9737827}
   m_LocalPosition: {x: -0.029346619, y: -0.020860596, z: -0.008330059}
@@ -8590,6 +9139,18 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075332880338
+=======
+  m_GameObject: {fileID: 3993139043536269048}
+  m_LocalRotation: {x: 0.000000257411, y: -0.00000016725211, z: 0.075725704, w: 0.9971287}
+  m_LocalPosition: {x: -0.091932215, y: 0.00000007033348, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043561553658}
+  m_Father: {fileID: 3993139044712905917}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043536598298
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8597,23 +9158,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075332880339}
   - component: {fileID: 3587441075332880350}
   - component: {fileID: 3587441075332880349}
   - component: {fileID: 3587441075332880348}
   m_Layer: 5
   m_Name: ResumeButton
+=======
+  - component: {fileID: 3993139043536598293}
+  m_Layer: 0
+  m_Name: bn_Ring_BRT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!224 &3587441075332880339
 RectTransform:
+=======
+--- !u!4 &3993139043536598293
+Transform:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075332880338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -8720,26 +9293,50 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &3587441075380752131
 GameObject:
+=======
+  m_GameObject: {fileID: 3993139043536598298}
+  m_LocalRotation: {x: 0.00000061644687, y: -0.00000005256002, z: 0.006897418, w: 0.9999762}
+  m_LocalPosition: {x: -0.014027328, y: 0.000000009536743, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139044470463123}
+  m_Father: {fileID: 3993139044318798054}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043558904062
+GameObject:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075380752140}
   m_Layer: 0
   m_Name: bn_Camera
+=======
+  - component: {fileID: 3993139043558904057}
+  m_Layer: 0
+  m_Name: bn_Index_BLT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075380752140
+=======
+--- !u!4 &3993139043558904057
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075380752131}
   m_LocalRotation: {x: -1.4223733e-14, y: 0.006068391, z: -4.1329284e-16, w: 0.9999816}
   m_LocalPosition: {x: 0.012136558, y: 0, z: 0.99992645}
@@ -8751,6 +9348,18 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075408591393
+=======
+  m_GameObject: {fileID: 3993139043558904062}
+  m_LocalRotation: {x: 0.0000021375351, y: -0.022133285, z: 0.00000004359606, w: 0.999755}
+  m_LocalPosition: {x: -0.016782073, y: -0.00000033855437, z: 0.000000095367426}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043213325858}
+  m_Father: {fileID: 3993139043841613176}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043561553659
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8758,22 +9367,34 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075408591394}
   - component: {fileID: 3587441075408591404}
   - component: {fileID: 3587441075408591395}
   m_Layer: 5
   m_Name: pausePlane
+=======
+  - component: {fileID: 3993139043561553658}
+  m_Layer: 0
+  m_Name: bn_Hand_LT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!224 &3587441075408591394
 RectTransform:
+=======
+--- !u!4 &3993139043561553658
+Transform:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075408591393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -8828,6 +9449,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
 --- !u!1 &3587441075413824478
+=======
+  m_GameObject: {fileID: 3993139043561553659}
+  m_LocalRotation: {x: 0.0000003613531, y: 0.0000011548401, z: 0.00000003725249, w: 1}
+  m_LocalPosition: {x: -0.09752022, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139044551717219}
+  - {fileID: 3993139043841613176}
+  - {fileID: 3993139043327510781}
+  - {fileID: 3993139044494839000}
+  - {fileID: 3993139044237999290}
+  m_Father: {fileID: 3993139043536269051}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043570482506
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8835,20 +9472,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075413824479}
   m_Layer: 0
   m_Name: bn_Thumb_ALT
+=======
+  - component: {fileID: 3993139043570482501}
+  m_Layer: 0
+  m_Name: bn_Finger_ART
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075413824479
+=======
+--- !u!4 &3993139043570482501
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075413824478}
   m_LocalRotation: {x: -0.37325516, y: -0.152222, z: 0.2432932, w: 0.882223}
   m_LocalPosition: {x: -0.0151486965, y: -0.0085591795, z: -0.00036178587}
@@ -8859,6 +9507,18 @@ Transform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075423406715
+=======
+  m_GameObject: {fileID: 3993139043570482506}
+  m_LocalRotation: {x: 0.059177026, y: -0.09745459, z: 0.12543784, w: 0.9855283}
+  m_LocalPosition: {x: -0.037880667, y: -0.004064016, z: 0.0013759803}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139044406786544}
+  m_Father: {fileID: 3993139044641363865}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043586746094
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8866,20 +9526,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075423406660}
   m_Layer: 0
   m_Name: bn_Index_ART
+=======
+  - component: {fileID: 3993139043586746089}
+  m_Layer: 0
+  m_Name: bn_Finger_CLT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075423406660
+=======
+--- !u!4 &3993139043586746089
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075423406715}
   m_LocalRotation: {x: 0.0061429394, y: -0.0887846, z: 0.09742577, w: 0.9912557}
   m_LocalPosition: {x: -0.039434165, y: 0.0067292782, z: 0.0023851776}
@@ -8890,6 +9561,17 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075437874184
+=======
+  m_GameObject: {fileID: 3993139043586746094}
+  m_LocalRotation: {x: -0.00000045530868, y: -0.021554453, z: 0.00000022865774, w: 0.99976766}
+  m_LocalPosition: {x: -0.010795364, y: -0.000000114440915, z: -0.000000076293944}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139043113455936}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043600669416
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8897,23 +9579,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075437874185}
   - component: {fileID: 3587441075437874196}
   - component: {fileID: 3587441075437874187}
   - component: {fileID: 3587441075437874186}
   m_Layer: 5
   m_Name: Text
+=======
+  - component: {fileID: 3993139043600669419}
+  m_Layer: 0
+  m_Name: bn_Thumb_BLT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!224 &3587441075437874185
 RectTransform:
+=======
+--- !u!4 &3993139043600669419
+Transform:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075437874184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -8985,6 +9679,18 @@ MonoBehaviour:
   m_EffectDistance: {x: 4, y: -4}
   m_UseGraphicAlpha: 1
 --- !u!1 &3587441075476046943
+=======
+  m_GameObject: {fileID: 3993139043600669416}
+  m_LocalRotation: {x: 0.0000014241599, y: 0.0000011390914, z: -0.2380902, w: 0.9712431}
+  m_LocalPosition: {x: -0.014672928, y: 0.000000038146972, z: 0.000000076293944}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139042833397641}
+  m_Father: {fileID: 3993139044237999290}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043671186429
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8992,7 +9698,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075476046936}
+=======
+  - component: {fileID: 3993139043671186428}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Layer: 0
   m_Name: bn_Thumb_ART
   m_TagString: Untagged
@@ -9000,22 +9710,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075476046936
+=======
+--- !u!4 &3993139043671186428
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075476046943}
+=======
+  m_GameObject: {fileID: 3993139043671186429}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_LocalRotation: {x: 0.37325525, y: -0.15222202, z: -0.24329348, w: 0.88222295}
   m_LocalPosition: {x: -0.0151486965, y: 0.0085591795, z: -0.00036193847}
   m_LocalScale: {x: 1.000001, y: 1, z: 1}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 3587441075178004972}
   m_Father: {fileID: 3587441075760320548}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075514477857
+=======
+  - {fileID: 3993139042998995532}
+  m_Father: {fileID: 3993139044641363865}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043724326916
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9023,22 +9749,33 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075514477868}
   - component: {fileID: 3587441075514477859}
   - component: {fileID: 3587441075514477858}
   m_Layer: 0
   m_Name: EventSystem
+=======
+  - component: {fileID: 3993139043724326919}
+  m_Layer: 0
+  m_Name: bn_Pinky_BLT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075514477868
+=======
+--- !u!4 &3993139043724326919
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075514477857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -512.00006, y: -384, z: 0}
@@ -9049,10 +9786,25 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3587441075514477859
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 3993139043724326916}
+  m_LocalRotation: {x: 0.0000013273677, y: 0.0000007413323, z: -0.00000035762886,
+    w: 1}
+  m_LocalPosition: {x: -0.013518219, y: -0.000000009536743, z: 0.000000076293944}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139044221373194}
+  m_Father: {fileID: 3993139043327510781}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043841613177
+GameObject:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075514477857}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -9064,10 +9816,25 @@ MonoBehaviour:
   m_DragThreshold: 10
 --- !u!114 &3587441075514477858
 MonoBehaviour:
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3993139043841613176}
+  m_Layer: 0
+  m_Name: bn_Index_ALT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3993139043841613176
+Transform:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075514477857}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -9082,6 +9849,18 @@ MonoBehaviour:
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
 --- !u!1 &3587441075545261770
+=======
+  m_GameObject: {fileID: 3993139043841613177}
+  m_LocalRotation: {x: -0.0061432477, y: -0.088784516, z: -0.097425774, w: 0.9912557}
+  m_LocalPosition: {x: -0.039434433, y: -0.00672925, z: 0.0023852156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043558904057}
+  m_Father: {fileID: 3993139043561553658}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139043857355531
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9089,9 +9868,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075545261771}
   - component: {fileID: 3587441075545261781}
   - component: {fileID: 3587441075545261780}
+=======
+  - component: {fileID: 3993139043857355530}
+  - component: {fileID: 3993139043857355524}
+  - component: {fileID: 3993139043857355525}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9099,28 +9884,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075545261771
+=======
+--- !u!4 &3993139043857355530
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075545261770}
+=======
+  m_GameObject: {fileID: 3993139043857355531}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 3587441075908598031}
   m_Father: {fileID: 3587441075221860335}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &3587441075545261781
+=======
+  - {fileID: 3993139042701955121}
+  m_Father: {fileID: 3993139043398471179}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &3993139043857355524
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075545261770}
+=======
+  m_GameObject: {fileID: 3993139043857355531}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -9156,15 +9961,25 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+<<<<<<< HEAD
 --- !u!81 &3587441075545261780
+=======
+--- !u!81 &3993139043857355525
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075545261770}
   m_Enabled: 1
 --- !u!1 &3587441075594000834
+=======
+  m_GameObject: {fileID: 3993139043857355531}
+  m_Enabled: 1
+--- !u!1 &3993139044140954356
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9172,20 +9987,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075594000835}
   m_Layer: 0
   m_Name: bn_Index_CLT
+=======
+  - component: {fileID: 3993139044140954359}
+  m_Layer: 0
+  m_Name: bn_Finger_CRT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075594000835
+=======
+--- !u!4 &3993139044140954359
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075594000834}
   m_LocalRotation: {x: -0.00000022363952, y: -0.027036991, z: -0.0000000041854253,
     w: 0.99963444}
@@ -9196,6 +10022,18 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075641534899
+=======
+  m_GameObject: {fileID: 3993139044140954356}
+  m_LocalRotation: {x: 0.000000014015711, y: -0.021554353, z: -0.0000000034239864,
+    w: 0.99976766}
+  m_LocalPosition: {x: -0.010795288, y: 0.000000114440915, z: 0.000000019073486}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139044406786544}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044221373195
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9203,20 +10041,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075641534908}
   m_Layer: 0
   m_Name: bn_Index_ALT
+=======
+  - component: {fileID: 3993139044221373194}
+  m_Layer: 0
+  m_Name: bn_Pinky_CLT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075641534908
+=======
+--- !u!4 &3993139044221373194
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075641534899}
   m_LocalRotation: {x: -0.0061432477, y: -0.088784516, z: -0.097425774, w: 0.9912557}
   m_LocalPosition: {x: -0.039434433, y: -0.00672925, z: 0.0023852156}
@@ -9227,6 +10076,17 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075648782864
+=======
+  m_GameObject: {fileID: 3993139044221373195}
+  m_LocalRotation: {x: 0.0000029320352, y: 0.00000074226404, z: -0.000000014903337,
+    w: 1}
+  m_LocalPosition: {x: -0.008509903, y: 0, z: 0.000000019073486}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139043724326919}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044237999291
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9234,20 +10094,63 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3587441075648782865}
+  - component: {fileID: 3993139044237999290}
   m_Layer: 0
-  m_Name: bn_Finger_ART
+  m_Name: bn_Thumb_ALT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3587441075648782865
+--- !u!4 &3993139044237999290
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993139044237999291}
+  m_LocalRotation: {x: -0.37325516, y: -0.152222, z: 0.2432932, w: 0.882223}
+  m_LocalPosition: {x: -0.0151486965, y: -0.0085591795, z: -0.00036178587}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043600669419}
+  m_Father: {fileID: 3993139043561553658}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044318798055
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< HEAD
+  - component: {fileID: 3587441075648782865}
+  m_Layer: 0
+  m_Name: bn_Finger_ART
+=======
+  - component: {fileID: 3993139044318798054}
+  m_Layer: 0
+  m_Name: bn_Ring_ART
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< HEAD
+--- !u!4 &3587441075648782865
+=======
+--- !u!4 &3993139044318798054
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075648782864}
   m_LocalRotation: {x: 0.059177026, y: -0.09745459, z: 0.12543784, w: 0.9855283}
   m_LocalPosition: {x: -0.037880667, y: -0.004064016, z: 0.0013759803}
@@ -9258,6 +10161,18 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075704228219
+=======
+  m_GameObject: {fileID: 3993139044318798055}
+  m_LocalRotation: {x: 0.15366155, y: -0.0889442, z: 0.16815364, w: 0.9696399}
+  m_LocalPosition: {x: -0.036321793, y: -0.012794952, z: -0.0055501363}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043536598293}
+  m_Father: {fileID: 3993139044641363865}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044322140182
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9265,20 +10180,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075704228164}
   m_Layer: 0
   m_Name: bn_ForeArm_LT
+=======
+  - component: {fileID: 3993139044322140177}
+  m_Layer: 0
+  m_Name: bn_Index_BRT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075704228164
+=======
+--- !u!4 &3993139044322140177
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075704228219}
   m_LocalRotation: {x: 0.000000257411, y: -0.00000016725211, z: 0.075725704, w: 0.9971287}
   m_LocalPosition: {x: -0.091932215, y: 0.00000007033348, z: 0}
@@ -9289,6 +10215,18 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075714466414
+=======
+  m_GameObject: {fileID: 3993139044322140182}
+  m_LocalRotation: {x: -0.0000019066672, y: -0.022132711, z: -0.000000037552297, w: 0.9997551}
+  m_LocalPosition: {x: -0.016782073, y: 0.0000003504753, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139042913239089}
+  m_Father: {fileID: 3993139042687318154}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044372426810
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9296,8 +10234,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075714466415}
   - component: {fileID: 3587441075714466408}
+=======
+  - component: {fileID: 3993139044372426805}
+  - component: {fileID: 3993139044372426804}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Layer: 0
   m_Name: Hands_01
   m_TagString: Untagged
@@ -9305,27 +10248,46 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075714466415
+=======
+--- !u!4 &3993139044372426805
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075714466414}
+=======
+  m_GameObject: {fileID: 3993139044372426810}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0.28446627, z: 0.015466318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< HEAD
   m_Father: {fileID: 3587441075908598031}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &3587441075714466408
+=======
+  m_Father: {fileID: 3993139042701955121}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &3993139044372426804
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075714466414}
+=======
+  m_GameObject: {fileID: 3993139044372426810}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -9362,6 +10324,7 @@ SkinnedMeshRenderer:
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300000, guid: b5a4f7129b4559241aa06bf4eded7c86, type: 3}
   m_Bones:
+<<<<<<< HEAD
   - {fileID: 3587441075790214898}
   - {fileID: 3587441076729591153}
   - {fileID: 3587441075760320548}
@@ -9400,11 +10363,55 @@ SkinnedMeshRenderer:
   - {fileID: 3587441075594000835}
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 3587441076604241077}
+=======
+  - {fileID: 3993139042675410289}
+  - {fileID: 3993139044678730682}
+  - {fileID: 3993139044641363865}
+  - {fileID: 3993139044712905917}
+  - {fileID: 3993139043536269051}
+  - {fileID: 3993139043561553658}
+  - {fileID: 3993139043671186428}
+  - {fileID: 3993139044650647566}
+  - {fileID: 3993139044318798054}
+  - {fileID: 3993139042998995532}
+  - {fileID: 3993139044475048176}
+  - {fileID: 3993139042687318154}
+  - {fileID: 3993139043570482501}
+  - {fileID: 3993139044322140177}
+  - {fileID: 3993139043043282917}
+  - {fileID: 3993139044406786544}
+  - {fileID: 3993139044140954359}
+  - {fileID: 3993139042913239089}
+  - {fileID: 3993139042900343055}
+  - {fileID: 3993139043536598293}
+  - {fileID: 3993139044470463123}
+  - {fileID: 3993139044237999290}
+  - {fileID: 3993139043600669419}
+  - {fileID: 3993139042833397641}
+  - {fileID: 3993139043841613176}
+  - {fileID: 3993139044551717219}
+  - {fileID: 3993139043327510781}
+  - {fileID: 3993139044494839000}
+  - {fileID: 3993139043558904057}
+  - {fileID: 3993139043113455936}
+  - {fileID: 3993139043724326919}
+  - {fileID: 3993139044221373194}
+  - {fileID: 3993139043330303830}
+  - {fileID: 3993139042691623955}
+  - {fileID: 3993139043586746089}
+  - {fileID: 3993139043213325858}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 3993139044712905917}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_AABB:
     m_Center: {x: -0.121927306, y: -0.017802771, z: -0.16881439}
     m_Extent: {x: 0.14453699, y: 0.04716083, z: 0.19429168}
   m_DirtyAABB: 0
+<<<<<<< HEAD
 --- !u!1 &3587441075719471711
+=======
+--- !u!1 &3993139044406786545
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9412,20 +10419,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075719471704}
   m_Layer: 0
   m_Name: bn_Pinky_BRT
+=======
+  - component: {fileID: 3993139044406786544}
+  m_Layer: 0
+  m_Name: bn_Finger_BRT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075719471704
+=======
+--- !u!4 &3993139044406786544
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075719471711}
   m_LocalRotation: {x: -0.0000012987292, y: -9.313417e-10, z: 0.000000014901157, w: 1}
   m_LocalPosition: {x: -0.01351799, y: -0.000000009536743, z: 0}
@@ -9436,6 +10454,18 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075730983593
+=======
+  m_GameObject: {fileID: 3993139044406786545}
+  m_LocalRotation: {x: 0.0000019462047, y: -0.014797614, z: 0.00000012939616, w: 0.9998905}
+  m_LocalPosition: {x: -0.016229859, y: 0.000000023841856, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139044140954359}
+  m_Father: {fileID: 3993139043570482501}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044470463120
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9443,20 +10473,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075730983594}
   m_Layer: 0
   m_Name: bn_Pinky_BLT
+=======
+  - component: {fileID: 3993139044470463123}
+  m_Layer: 0
+  m_Name: bn_Pinky_CRT 1
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075730983594
+=======
+--- !u!4 &3993139044470463123
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075730983593}
   m_LocalRotation: {x: 0.0000013273677, y: 0.0000007413323, z: -0.00000035762886,
     w: 1}
@@ -9468,6 +10509,17 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075760320603
+=======
+  m_GameObject: {fileID: 3993139044470463120}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.01050415, y: 0.0000001335144, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139043536598293}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044475048177
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9475,20 +10527,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075760320548}
   m_Layer: 0
   m_Name: bn_Hand_RT
+=======
+  - component: {fileID: 3993139044475048176}
+  m_Layer: 0
+  m_Name: bn_Thumb_CRT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075760320548
+=======
+--- !u!4 &3993139044475048176
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075760320603}
   m_LocalRotation: {x: -0.00000032223767, y: 0.0000010579824, z: 0.000000022352083,
     w: 1}
@@ -9504,6 +10567,17 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075790214897
+=======
+  m_GameObject: {fileID: 3993139044475048177}
+  m_LocalRotation: {x: -0.0000023201017, y: 0.0000017033744, z: 0.09095942, w: 0.9958546}
+  m_LocalPosition: {x: -0.012709884, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139042998995532}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044494839001
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9511,20 +10585,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075790214898}
   m_Layer: 0
   m_Name: bn_UpperArm_RT
+=======
+  - component: {fileID: 3993139044494839000}
+  m_Layer: 0
+  m_Name: bn_Ring_ALT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075790214898
+=======
+--- !u!4 &3993139044494839000
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075790214897}
   m_LocalRotation: {x: 0.6276754, y: 0.004662626, z: 0.7784392, w: 0.005850569}
   m_LocalPosition: {x: 0.12563974, y: 0.00012885095, z: -0.078706965}
@@ -9535,6 +10620,18 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075880127227
+=======
+  m_GameObject: {fileID: 3993139044494839001}
+  m_LocalRotation: {x: -0.15366158, y: -0.08894396, z: -0.16815367, w: 0.9696399}
+  m_LocalPosition: {x: -0.036321715, y: 0.012794981, z: -0.0055501745}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043330303830}
+  m_Father: {fileID: 3993139043561553658}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044551717216
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9542,20 +10639,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075880127172}
   m_Layer: 0
   m_Name: bn_Pinky_ALT
+=======
+  - component: {fileID: 3993139044551717219}
+  m_Layer: 0
+  m_Name: bn_Finger_ALT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075880127172
+=======
+--- !u!4 &3993139044551717219
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075880127227}
   m_LocalRotation: {x: -0.080422774, y: -0.09903613, z: -0.18833773, w: 0.9737828}
   m_LocalPosition: {x: -0.029346542, y: 0.020860624, z: -0.008330078}
@@ -9566,6 +10674,18 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441075908598029
+=======
+  m_GameObject: {fileID: 3993139044551717216}
+  m_LocalRotation: {x: -0.05917747, y: -0.097454876, z: -0.12543799, w: 0.98552823}
+  m_LocalPosition: {x: -0.03788082, y: 0.004064035, z: 0.0013759232}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043113455936}
+  m_Father: {fileID: 3993139043561553658}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044576151886
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9573,21 +10693,32 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441075908598031}
   - component: {fileID: 3587441075908598030}
   m_Layer: 0
   m_Name: Hand_Asset
+=======
+  - component: {fileID: 3993139044576151881}
+  m_Layer: 0
+  m_Name: Foward
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441075908598031
+=======
+--- !u!4 &3993139044576151881
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441075908598029}
   m_LocalRotation: {x: -0.14610043, y: -0, z: -0, w: 0.9892698}
   m_LocalPosition: {x: 0, y: -1.09, z: 0.287}
@@ -9679,12 +10810,25 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441076218646541
 GameObject:
+=======
+  m_GameObject: {fileID: 3993139044576151886}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.051, z: 0.511}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3993139043398471179}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044641363870
+GameObject:
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441076218646542}
   m_Layer: 0
   m_Name: bn_Finger_BLT
@@ -9750,17 +10894,27 @@ GameObject:
   - component: {fileID: 3587441076308254646}
   m_Layer: 0
   m_Name: bn_Pinky_CLT
+=======
+  - component: {fileID: 3993139044641363865}
+  m_Layer: 0
+  m_Name: bn_Hand_RT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441076308254646
+=======
+--- !u!4 &3993139044641363865
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441076308254645}
   m_LocalRotation: {x: 0.0000029320352, y: 0.00000074226404, z: -0.000000014903337,
     w: 1}
@@ -9833,6 +10987,23 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441076469366996
+=======
+  m_GameObject: {fileID: 3993139044641363870}
+  m_LocalRotation: {x: -0.00000032223767, y: 0.0000010579824, z: 0.000000022352083,
+    w: 1}
+  m_LocalPosition: {x: -0.09752037, y: 0.000000019073486, z: 0.000000076293944}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043570482501}
+  - {fileID: 3993139042687318154}
+  - {fileID: 3993139044650647566}
+  - {fileID: 3993139044318798054}
+  - {fileID: 3993139043671186428}
+  m_Father: {fileID: 3993139044678730682}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044650647567
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9840,6 +11011,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441076469366997}
   m_Layer: 0
   m_Name: bn_Index_CRT
@@ -9873,17 +11045,27 @@ GameObject:
   - component: {fileID: 3587441076539046576}
   m_Layer: 0
   m_Name: bn_Thumb_CRT
+=======
+  - component: {fileID: 3993139044650647566}
+  m_Layer: 0
+  m_Name: bn_Pinky_ART
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441076539046576
+=======
+--- !u!4 &3993139044650647566
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441076539046583}
   m_LocalRotation: {x: -0.0000023201017, y: 0.0000017033744, z: 0.09095942, w: 0.9958546}
   m_LocalPosition: {x: -0.012709884, y: 0, z: 0}
@@ -10260,6 +11442,18 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441076699437366
+=======
+  m_GameObject: {fileID: 3993139044650647567}
+  m_LocalRotation: {x: 0.08042316, y: -0.0990356, z: 0.18833832, w: 0.9737827}
+  m_LocalPosition: {x: -0.029346619, y: -0.020860596, z: -0.008330059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043043282917}
+  m_Father: {fileID: 3993139044641363865}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044678730683
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10267,6 +11461,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441076699437367}
   m_Layer: 0
   m_Name: bn_Ring_BRT
@@ -10299,6 +11494,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3587441076729591153}
+=======
+  - component: {fileID: 3993139044678730682}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_Layer: 0
   m_Name: bn_ForeArm_RT
   m_TagString: Untagged
@@ -10306,23 +11504,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441076729591153
+=======
+--- !u!4 &3993139044678730682
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441076729591152}
+=======
+  m_GameObject: {fileID: 3993139044678730683}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_LocalRotation: {x: -0.0000000016925998, y: -0.000000022287566, z: -0.07572563,
     w: 0.9971287}
   m_LocalPosition: {x: -0.09193214, y: -0.000000077486035, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 3587441075760320548}
   m_Father: {fileID: 3587441075790214898}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3587441076804008260
+=======
+  - {fileID: 3993139044641363865}
+  m_Father: {fileID: 3993139042675410289}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3993139044712905794
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10330,20 +11544,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3587441076804008261}
   m_Layer: 0
   m_Name: bn_Index_BLT
+=======
+  - component: {fileID: 3993139044712905917}
+  m_Layer: 0
+  m_Name: bn_UpperArm_LT
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3587441076804008261
+=======
+--- !u!4 &3993139044712905917
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 3587441076804008260}
   m_LocalRotation: {x: 0.0000021375351, y: -0.022133285, z: 0.00000004359606, w: 0.999755}
   m_LocalPosition: {x: -0.016782073, y: -0.00000033855437, z: 0.000000095367426}
@@ -10385,3 +11610,14 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> Stashed changes
+=======
+  m_GameObject: {fileID: 3993139044712905794}
+  m_LocalRotation: {x: -0.0046630325, y: -0.6276755, z: 0.005850112, w: 0.77843916}
+  m_LocalPosition: {x: -0.12600002, y: 0.00012885095, z: -0.078706965}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3993139043536269051}
+  m_Father: {fileID: 3993139043241323279}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 6e8f708... Merge branch 'master' of https://github.com/Sgtmoustache/MtlGameJam2019
