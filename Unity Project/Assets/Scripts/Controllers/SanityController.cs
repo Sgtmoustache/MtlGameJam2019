@@ -122,10 +122,10 @@ public class SanityController : MonoBehaviour
         //Annimations and triggers checkpoint
         isDead = true;
         currentSanity = 0;
-        var fade = GameObject.Find("Main Camera").GetComponent<FadeEvent>();
-        fade.changebool();
+        //var fade = GameObject.Find("Main Camera").GetComponent<FadeEvent>();
+        //fade.changebool();
         Application.LoadLevel(Application.loadedLevel);
-        fade.changebool();
+        //fade.changebool();
 
     }
 }
