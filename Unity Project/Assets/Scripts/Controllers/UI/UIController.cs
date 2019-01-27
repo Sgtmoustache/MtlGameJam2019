@@ -6,6 +6,7 @@ public class UIController : MonoBehaviour
 {
     public GameObject fader;
     public float fadeSpeed;
+    public AudioClip fadeSound;
     public AudioClip buttonPress;
 
     private bool isFading = false;
@@ -17,9 +18,13 @@ public class UIController : MonoBehaviour
     }
     public void changeScene(string scenename)
     {
-        if(fader != null)
-            //SceneManager.LoadScene(scenename);
+        if (fader != null)
+        {
+            IEnumerator fadeSound1 = AudioFadeOut.FadeOut(GetComponent<AudioSource>(), 0.5f);
+            StartCoroutine(fadeSound1);
             StartCoroutine(Fade(scenename, fader));
+            StopCoroutine(fadeSound1);
+        }             
         else
             SceneManager.LoadScene(scenename);
     }
@@ -34,6 +39,9 @@ public class UIController : MonoBehaviour
         isFading = true;
         if(buttonPress != null)
             GetComponent<AudioSource>().PlayOneShot(buttonPress);
+
+        GetComponent<AudioSource>().PlayOneShot(fadeSound,0.4f);
+        
         yield return new WaitUntil(() => fader.transform.position.x >= 400);
         SceneManager.LoadScene(sceneName);
     }
