@@ -32,7 +32,8 @@ public class UIController : MonoBehaviour
     private IEnumerator Fade(string sceneName, GameObject fadeOut)
     {
         isFading = true;
-        GetComponent<AudioSource>().PlayOneShot(buttonPress);
+        if(buttonPress != null)
+            GetComponent<AudioSource>().PlayOneShot(buttonPress);
         yield return new WaitUntil(() => fader.transform.position.x >= 400);
         SceneManager.LoadScene(sceneName);
     }

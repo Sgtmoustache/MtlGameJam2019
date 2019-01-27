@@ -31,7 +31,8 @@ public class SplashScreenController : MonoBehaviour
         }
         yield return new WaitForSeconds(3);
         audiosource.Stop();
-        audiosource.PlayOneShot(audio);
+        if(audio != null)
+            audiosource.PlayOneShot(audio);
         // loop over 1 second backwards
         for (float i = 1; i >= 0; i -= Time.deltaTime)
         {

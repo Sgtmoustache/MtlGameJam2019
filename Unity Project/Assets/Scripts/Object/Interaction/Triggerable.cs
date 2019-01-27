@@ -49,7 +49,8 @@ public class Triggerable : Interactable
     IEnumerator PlaySound()
     {
         yield return new WaitForSeconds(audioDelay);
-        audioSource.PlayOneShot(AnimationSound);
+        if(AnimationSound != null)
+            audioSource.PlayOneShot(AnimationSound);
     }
     
 

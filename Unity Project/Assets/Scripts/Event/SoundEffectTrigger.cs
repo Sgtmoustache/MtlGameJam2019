@@ -12,7 +12,8 @@ public class SoundEffectTrigger : TriggerObject
     {
         if (currentCount < triggerCount || triggerCount <= 0)
         {
-            GetComponent<AudioSource>().PlayOneShot(soundEffect, volume);
+            if(soundEffect != null)
+                GetComponent<AudioSource>().PlayOneShot(soundEffect, volume);
         }
     }
 }
