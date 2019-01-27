@@ -11,20 +11,22 @@ public class Pushable : Interactable
     {
         try
         {
+            Physics.IgnoreCollision(player.GetComponent<CapsuleCollider>(), GetComponent<BoxCollider>(),input);
+
             if (input)
             {
-                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None & RigidbodyConstraints.FreezePositionZ & RigidbodyConstraints.FreezeRotation;
-                transform.parent = player.transform;
-                
+                currentActive = TypeOfAction.PUSHABLE;
+                player.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
 
+                transform.parent = player.transform;
                 RaycastHit hit;
 
-                Vector3 Direction = Vector3.Normalize(transform.position - player.transform.position);
-                Ray rayFeet = new Ray(transform.position, Direction);
+                Vector3 Direction = Vector3.Normalize(transform.position - player.transform.GetChild(3).transform.position);
+                Ray rayFeet = new Ray(player.transform.GetChild(3).transform.position, Direction);
 
                 if (Physics.Raycast(rayFeet, out hit, 3))
                 {
-                    Vector3 test = (transform.position + Direction * (2f - Vector3.Distance(player.transform.position, hit.point)));
+                    Vector3 test = (transform.position + Direction * (1.2f - Vector3.Distance(player.transform.position, hit.point)));
                     transform.position = new Vector3(test.x, 0, test.z);
                 }
 
@@ -60,6 +62,8 @@ public class Pushable : Interactable
             }
             if (!input)
             {
+                currentActive = TypeOfAction.NOTHING;
+                player.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
                 GetComponent<Rigidbody>().isKinematic = false;
                 audioSource.Stop();
                 player.GetComponentInChildren<Animator>().SetBool("Push", false);

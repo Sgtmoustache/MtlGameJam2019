@@ -35,7 +35,6 @@ public class CharacterController : MonoBehaviour
     private bool outofpause;
 
     public float interactionRange = 10f;
-    private bool isLeftClicking = false;
 
 
     // Start is called before the first frame update
@@ -80,9 +79,7 @@ public class CharacterController : MonoBehaviour
                 gateRotation = false;
                 Pmenu.SetActive(true);
                 Time.timeScale = 0f;
-                
-            }    
-                
+            }  
         }
         
         //Mouvement
@@ -149,23 +146,22 @@ public class CharacterController : MonoBehaviour
     private void checkForObject()
     {
         RaycastHit hit;
-        Debug.DrawRay(transform.position, transform.forward, Color.red);
 
         Ray rayFeet = new Ray(feets.transform.position, transform.forward);
 
         if (Physics.Raycast(rayFeet, out hit, interactionRange))
         {
-            Debug.DrawLine(foward.transform.position, hit.point, Color.red);
+            Debug.DrawLine(transform.position, hit.point, Color.red);
 
             foreach (Interactable interactable in hit.collider.gameObject.GetComponents<Interactable>())
             {
-                if (interactable is Climbable && Input.GetKey("space"))
+                if (interactable is Climbable && Input.GetKey("space") && (Interactable.currentActive == TypeOfAction.NOTHING || Interactable.currentActive == TypeOfAction.CLIMABLE))
                 {
                     Debug.Log("try to climb");
                     interactable.Interact(gameObject, true);
                 }
 
-                if (interactable is Pushable)
+                if (interactable is Pushable && (Interactable.currentActive == TypeOfAction.NOTHING || Interactable.currentActive == TypeOfAction.PUSHABLE))
                 {
                     Debug.Log("try to push");
                     interactable.Interact(gameObject, Input.GetMouseButton(0));

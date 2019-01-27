@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
+    public static TypeOfAction currentActive = TypeOfAction.NOTHING;
     public abstract void Interact(GameObject player, bool input);
     public abstract void OnStart();
 
@@ -12,3 +13,14 @@ public abstract class Interactable : MonoBehaviour
         OnStart();
     }
 }
+
+public enum TypeOfAction
+{
+    CLIMABLE = 0,
+    COLLECTABLE = 1,
+    PICKABLE = 2,
+    PUSHABLE =3 ,
+    TRIGGERABLE = 4,
+    NOTHING = -1
+}
+
