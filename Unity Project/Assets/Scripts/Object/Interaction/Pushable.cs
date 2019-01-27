@@ -6,28 +6,27 @@ public class Pushable : Interactable
 {
     public AudioClip DragingSound;
     private AudioSource audioSource;
+    public Joint joint;
+
+    private bool first_pass;
 
     public override void Interact(GameObject player, bool input)
     {
+        Rigidbody r_player = player.GetComponent<Rigidbody>();
+        Rigidbody r_object = this.GetComponent<Rigidbody>();
+
         try
         {
-            Physics.IgnoreCollision(player.GetComponent<CapsuleCollider>(), GetComponent<BoxCollider>(),input);
-
             if (input)
             {
-                currentActive = TypeOfAction.PUSHABLE;
-                player.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+                  currentActive = TypeOfAction.PUSHABLE;
 
-                transform.parent = player.transform;
-                RaycastHit hit;
-
-                Vector3 Direction = Vector3.Normalize(transform.position - player.transform.GetChild(3).transform.position);
-                Ray rayFeet = new Ray(player.transform.GetChild(3).transform.position, Direction);
-
-                if (Physics.Raycast(rayFeet, out hit, 3))
+                if (first_pass)
                 {
-                    Vector3 test = (transform.position + Direction * (1.2f - Vector3.Distance(player.transform.position, hit.point)));
-                    transform.position = new Vector3(test.x, 0, test.z);
+                    player.gameObject.AddComponent<FixedJoint>();
+                    player.gameObject.GetComponent<FixedJoint>().connectedBody = r_object;
+                    first_pass = false;
+                    r_object.mass = 10;
                 }
 
                 player.SendMessage("StopSideWay", false);
@@ -62,6 +61,7 @@ public class Pushable : Interactable
             }
             if (!input)
             {
+                Destroy(player.GetComponent<ConfigurableJoint>());
                 currentActive = TypeOfAction.NOTHING;
                 player.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
                 GetComponent<Rigidbody>().isKinematic = false;
@@ -73,6 +73,9 @@ public class Pushable : Interactable
                 print("Left click was released");
                 player.SendMessage("StopSideWay", true);
                 player.SendMessage("StopRotation", true);
+                first_pass = true;
+                r_object.mass = 1000;
+                Destroy(player.gameObject.GetComponent<FixedJoint>());
             }
 
         }
@@ -87,6 +90,7 @@ public class Pushable : Interactable
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = DragingSound;
         audioSource.loop = true;
+        first_pass = true;
 
         if (gameObject.GetComponent<Rigidbody>() == null)
         {
