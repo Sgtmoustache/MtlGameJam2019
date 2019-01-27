@@ -16,6 +16,7 @@ public class FallTrigger : TriggerObject
                 StartCoroutine(PushAnimationManager(player));
             transform.parent.GetComponent<Rigidbody>().isKinematic = false;
             transform.parent.GetComponent<Rigidbody>().AddTorque(force * transform.forward, ForceMode.Impulse);
+            currentCount--;
         }
     }
     IEnumerator PushAnimationManager(GameObject player)

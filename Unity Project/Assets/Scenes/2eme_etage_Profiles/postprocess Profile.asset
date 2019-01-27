@@ -39,13 +39,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.216
+    value: 0.34
   size:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 0.76
   lumContrib:
-    overrideState: 0
-    value: 0.8
+    overrideState: 1
+    value: 0.234
 --- !u!114 &114354098160038306
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -117,7 +117,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.039
+    value: 0.072
   fastMode:
     overrideState: 0
     value: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
     value: {x: 1, y: 1, z: 1, w: 0}
   gamma:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 0.92513096, y: 0.95915246, z: 1, w: 0}
   gain:
     overrideState: 0
     value: {x: 1, y: 1, z: 1, w: 0}
