@@ -6,33 +6,36 @@ public class Pushable : Interactable
 {
     public AudioClip DragingSound;
     private AudioSource audioSource;
+    public Joint joint;
+
+    private bool first_pass;
 
     public override void Interact(GameObject player, bool input)
     {
+        Rigidbody r_player = player.GetComponent<Rigidbody>();
+        Rigidbody r_object = this.GetComponent<Rigidbody>();
+
         try
         {
             if (input)
             {
-                transform.parent = player.transform;
+                  currentActive = TypeOfAction.PUSHABLE;
 
-                RaycastHit hit;
-
-                Vector3 Direction = Vector3.Normalize(transform.position - player.transform.position);
-                Ray rayFeet = new Ray(transform.position, Direction);
-
-                if (Physics.Raycast(rayFeet, out hit, 3))
+                if (first_pass)
                 {
-
-                    Vector3 test = (transform.position + Direction * (2f - Vector3.Distance(player.transform.position,hit.point)));
-                    transform.position = new Vector3(test.x, 0, test.z);
+                    player.gameObject.AddComponent<FixedJoint>();
+                    player.gameObject.GetComponent<FixedJoint>().connectedBody = r_object;
+                    first_pass = false;
+                    r_object.mass = 1;
                 }
-                   
+
                 player.SendMessage("StopSideWay", false);
                 player.SendMessage("StopRotation", false);
 
                 if (Input.GetKey("w"))
                 {
-                    player.GetComponentInChildren<Animator>().SetBool("Push", true);
+                    if (!player.GetComponentInChildren<Animator>().GetBool("Pull"))
+                        player.GetComponentInChildren<Animator>().SetBool("Push", true);
                     Debug.Log("You pushed " + gameObject.name);
                     if(!audioSource.isPlaying)
                         audioSource.Play();
@@ -45,7 +48,8 @@ public class Pushable : Interactable
                 }
                 if (Input.GetKey("s"))
                 {
-                    player.GetComponentInChildren<Animator>().SetBool("Pull", true);
+                    if(!player.GetComponentInChildren<Animator>().GetBool("Push"))
+                        player.GetComponentInChildren<Animator>().SetBool("Pull", true);
                     Debug.Log("You pulled " + gameObject.name);
                     if (!audioSource.isPlaying)
                         audioSource.Play();
@@ -59,6 +63,10 @@ public class Pushable : Interactable
             }
             if (!input)
             {
+                Destroy(player.GetComponent<ConfigurableJoint>());
+                currentActive = TypeOfAction.NOTHING;
+                player.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+                GetComponent<Rigidbody>().isKinematic = false;
                 audioSource.Stop();
                 player.GetComponentInChildren<Animator>().SetBool("Push", false);
                 player.GetComponentInChildren<Animator>().SetBool("Pull", false);
@@ -67,6 +75,9 @@ public class Pushable : Interactable
                 print("Left click was released");
                 player.SendMessage("StopSideWay", true);
                 player.SendMessage("StopRotation", true);
+                first_pass = true;
+                r_object.mass = 1000;
+                Destroy(player.gameObject.GetComponent<FixedJoint>());
             }
 
         }
@@ -81,6 +92,7 @@ public class Pushable : Interactable
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = DragingSound;
         audioSource.loop = true;
+        first_pass = true;
 
         if (gameObject.GetComponent<Rigidbody>() == null)
         {

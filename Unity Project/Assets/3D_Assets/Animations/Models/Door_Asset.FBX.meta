@@ -8,15 +8,20 @@ ModelImporter:
     100004: bn_Root
     100006: //RootNode
     100008: mod_Door
+    100010: MOD_Porte
     400000: bn_Door
     400002: bn_DoorNub
     400004: bn_Root
     400006: //RootNode
     400008: mod_Door
+    400010: MOD_Porte
     2100000: No Name
+    2100002: lambert1
     4300000: mod_Door
+    4300002: MOD_Porte
     9500000: //RootNode
     13700000: mod_Door
+    13700002: MOD_Porte
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -16,6 +16,7 @@ public class Climbable : Interactable
 
     private float height;
     private float distance;
+    public float soundDelay = 0.7f;
 
     private Vector2 travel;
     public AudioClip climbingSound;
@@ -28,13 +29,14 @@ public class Climbable : Interactable
             player = character;
             height = GetComponent<Collider>().bounds.size.y + transform.position.y - player.transform.position.y + 1;
             if (this.gameObject.tag.Equals("Cube"))
-                height = GetComponent<Collider>().bounds.size.y / 2 + transform.position.y - player.transform.position.y + 1;
+                height = GetComponent<Collider>().bounds.size.y / 2 + transform.position.y - player.transform.position.y + 1 + 0.1f;
 
             Debug.Log("hauteur  :" + height);
 
             if (height <= 1.1 && height > 0.30)
             {
-                Climb();
+                
+                StartCoroutine(Climb());
             }
             first_pass = false;
         }
@@ -50,8 +52,19 @@ public class Climbable : Interactable
         done_side = false;
     }
 
-    public void Climb()
+    IEnumerator Climb()
     {
+        currentActive = TypeOfAction.CLIMABLE;
+        player.GetComponentInChildren<Animator>().SetBool("Climb", true);
+        player.SendMessage("StopForward", false);
+        player.SendMessage("StopSideWay", false);
+        player.SendMessage("StopRotation", false);
+
+        yield return new WaitForSeconds(soundDelay);
+        if (climbingSound != null && !audioSource.isPlaying)
+            audioSource.PlayOneShot(climbingSound);
+        yield return new WaitForSeconds(0.6f-soundDelay);
+
         RaycastHit hit;
         Ray rayFeet = new Ray(player.transform.GetChild(3).transform.position, player.transform.forward);
         Physics.Raycast(rayFeet, out hit, 1);
@@ -61,15 +74,8 @@ public class Climbable : Interactable
         distance = Vector3.Distance(new Vector3(hit.point.x, 0, hit.point.z), new Vector3(player.transform.position.x, 0, player.transform.position.z));
         Debug.Log("Distance : " + distance);
 
-        player.SendMessage("StopForward", false);
-        player.SendMessage("StopSideWay", false);
-        player.SendMessage("StopRotation", false);
-
         move_up = true;
         move_side = true;
-
-        if(climbingSound != null && !audioSource.isPlaying)
-            audioSource.PlayOneShot(climbingSound);
     }
 
     public void finish()
@@ -83,11 +89,11 @@ public class Climbable : Interactable
         done_up = false;
         done_side = false;
         travel = new Vector2();
+        currentActive = TypeOfAction.NOTHING;
     }
 
     void Update()
-    {
-        Debug.Log("travel : " + travel);
+    { 
         if (move_up)
         {
             player.transform.Translate(0, 0.05f, 0);

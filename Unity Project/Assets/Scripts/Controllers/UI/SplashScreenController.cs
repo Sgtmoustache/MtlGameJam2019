@@ -7,6 +7,7 @@ public class SplashScreenController : MonoBehaviour
     public AudioClip audio;
     private AudioSource audiosource;
     public RawImage img;
+    public Texture closedTexture;
 
     // Start is called before the first frame update
     void Start()
@@ -18,28 +19,35 @@ public class SplashScreenController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     IEnumerator Timer()
     {
+        Time.timeScale = 1f;
+
         for (float i = 0; i <= 1; i += Time.deltaTime)
         {
             // set color with i as alpha
+            Debug.Log(i);
             img.color = new Color(1, 1, 1, i);
             yield return null;
         }
+
         yield return new WaitForSeconds(3);
+
         audiosource.Stop();
         if(audio != null)
             audiosource.PlayOneShot(audio);
-        // loop over 1 second backwards
+
+        img.texture = closedTexture;
+        //loop over 1 second backwards
         for (float i = 1; i >= 0; i -= Time.deltaTime)
         {
             // set color with i as alpha
             img.color = new Color(1, 1, 1, i);
             yield return null;
         }
+
         yield return new WaitForSeconds(2);
         LoadMenu();
     }

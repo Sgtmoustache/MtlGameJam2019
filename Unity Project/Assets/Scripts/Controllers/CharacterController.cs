@@ -11,7 +11,6 @@ public class CharacterController : MonoBehaviour
     public GameObject foward;
     public GameObject hands;
     public GameObject feets;
-    public GameObject liftPosition;
 
     //CamLook
     Vector2 mouseLook;
@@ -33,9 +32,9 @@ public class CharacterController : MonoBehaviour
     private bool gateSideway;
     private bool gateRotation;
     private bool pause;
+    private bool outofpause;
 
     public float interactionRange = 10f;
-    private bool isLeftClicking = false;
 
 
     // Start is called before the first frame update
@@ -45,6 +44,8 @@ public class CharacterController : MonoBehaviour
         Resume();
         WalkAudioSource = GetComponents<AudioSource>()[0];
         otherAudioSource = GetComponents<AudioSource>()[1];
+        outofpause = false;
+        pause = true;
 
         //CamLook
         view = transform.GetChild(0).gameObject;
@@ -53,13 +54,13 @@ public class CharacterController : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1f;
-        pause = true;
         Cursor.lockState = CursorLockMode.Locked;
         pause = true;
         gateForward = true;
         gateSideway = true;
         gateRotation = true;
         Pmenu.SetActive(false);
+        outofpause = true;
     }
 
     void Update()
@@ -70,7 +71,6 @@ public class CharacterController : MonoBehaviour
                 otherAudioSource.PlayOneShot(pauseSound);
             if(pause)
             {
-                
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 pause = false;
@@ -79,17 +79,7 @@ public class CharacterController : MonoBehaviour
                 gateRotation = false;
                 Pmenu.SetActive(true);
                 Time.timeScale = 0f;
-            }    
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                pause = true;
-                gateForward = true;
-                gateSideway = true;
-                gateRotation = true;
-                Pmenu.SetActive(false);
-            }
-                
+            }  
         }
         
         //Mouvement
@@ -133,9 +123,11 @@ public class CharacterController : MonoBehaviour
             view.transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(-mouseLook.y, -30, 80), Vector3.right);
             transform.localRotation = Quaternion.AngleAxis(mouseLook.x, transform.up);
         }
-        isLeftClicking = Input.GetMouseButton(0);
+        
+        if(!outofpause)
         checkForObject();
         lastPosition = transform.position;
+        outofpause = false;
     }
 
     public void StopForward(bool b)
@@ -153,30 +145,37 @@ public class CharacterController : MonoBehaviour
 
     private void checkForObject()
     {
+
+        int count = 0;
         RaycastHit hit;
-        Debug.DrawRay(transform.position, transform.forward, Color.red);
 
         Ray rayFeet = new Ray(feets.transform.position, transform.forward);
 
         if (Physics.Raycast(rayFeet, out hit, interactionRange))
         {
-            Debug.DrawLine(foward.transform.position, hit.point, Color.red);
-
+            Debug.DrawLine(transform.position, hit.point, Color.red);
+            
             foreach (Interactable interactable in hit.collider.gameObject.GetComponents<Interactable>())
             {
-                if (interactable is Climbable && Input.GetKey("space"))
+                if (Interactable.currentActive == TypeOfAction.NOTHING) {
+                    GetComponentInChildren<Animator>().SetBool("Interact", true);
+                }
+
+                if (interactable is Climbable && Input.GetKey("space") && (Interactable.currentActive == TypeOfAction.NOTHING || Interactable.currentActive == TypeOfAction.CLIMABLE))
                 {
                     Debug.Log("try to climb");
                     interactable.Interact(gameObject, true);
                 }
 
-                if (interactable is Pushable)
+                if (interactable is Pushable && (Interactable.currentActive == TypeOfAction.NOTHING || Interactable.currentActive == TypeOfAction.PUSHABLE))
                 {
                     Debug.Log("try to push");
                     interactable.Interact(gameObject, Input.GetMouseButton(0));
                 }
+                count++;
             }
         }
+       
 
         Ray rayFoward = new Ray(foward.transform.position, Camera.main.transform.forward);
 
@@ -185,12 +184,23 @@ public class CharacterController : MonoBehaviour
             Debug.DrawLine(foward.transform.position, hit.point, Color.blue);
             foreach (Interactable interactable in hit.collider.gameObject.GetComponents<Interactable>())
             {
+
+                if (Interactable.currentActive == TypeOfAction.NOTHING)
+                {
+                    GetComponentInChildren<Animator>().SetBool("Interact", true);
+                }
                 if ((interactable is Triggerable || interactable is Collectable || interactable is Pickable) && Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("try something");
-                    interactable.Interact(gameObject, isLeftClicking);
+                    interactable.Interact(gameObject, Input.GetMouseButton(0));
                 }
+                count++;
             }
         }
+        
+           if(count == 0) 
+                GetComponentInChildren<Animator>().SetBool("Interact", false);
+            
+        
     }
 }
