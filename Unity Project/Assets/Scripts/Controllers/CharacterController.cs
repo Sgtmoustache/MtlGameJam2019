@@ -48,7 +48,6 @@ public class CharacterController : MonoBehaviour
         view = transform.GetChild(0).gameObject;
     }
 
-
     public void Resume()
     {
         Time.timeScale = 1f;
@@ -65,7 +64,8 @@ public class CharacterController : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
-            otherAudioSource.PlayOneShot(pauseSound);
+            if(pauseSound != null)
+                otherAudioSource.PlayOneShot(pauseSound);
             if(pause)
             {
                 
@@ -98,18 +98,20 @@ public class CharacterController : MonoBehaviour
         if (!gateSideway) m_sideway = 0;
         if (!gateForward) m_forward = 0;
 
-        transform.Translate(m_sideway, 0, m_forward);
+        if (GetComponent<Rigidbody>().velocity.magnitude > speed)
+        {
+            GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * speed;
+        }
 
+        GetComponent<Rigidbody>().velocity = Vector3.Normalize(transform.forward) * m_forward + Vector3.Normalize(transform.right) * m_sideway + new Vector3(0,GetComponent<Rigidbody>().velocity.y,0);
 
-
+        //transform.Translate(m_sideway, 0, m_forward);
         if (transform.position == lastPosition)
         {
-            Debug.Log("Stop");
             WalkAudioSource.Stop();
         }
         else if (!WalkAudioSource.isPlaying)
         {
-            Debug.Log("Play");
             WalkAudioSource.Play();
         }
 
@@ -168,7 +170,7 @@ public class CharacterController : MonoBehaviour
                 if (interactable is Climbable && Input.GetKey("space"))
                 {
                     Debug.Log("try to climb");
-                    interactable.Interact(gameObject, Input.GetKey("space"));
+                    interactable.Interact(gameObject, true);
                 }
 
                 if (interactable is Pushable)
