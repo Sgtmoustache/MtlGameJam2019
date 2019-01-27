@@ -45,6 +45,7 @@ public class CharacterController : MonoBehaviour
         WalkAudioSource = GetComponents<AudioSource>()[0];
         otherAudioSource = GetComponents<AudioSource>()[1];
         outofpause = false;
+        pause = true;
 
         //CamLook
         view = transform.GetChild(0).gameObject;
@@ -70,7 +71,6 @@ public class CharacterController : MonoBehaviour
                 otherAudioSource.PlayOneShot(pauseSound);
             if(pause)
             {
-                
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 pause = false;
