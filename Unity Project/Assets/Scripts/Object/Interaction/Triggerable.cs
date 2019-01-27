@@ -5,7 +5,7 @@ using UnityEngine;
 public class Triggerable : Interactable
 {
     public int objectID = -1;
-    private bool isToggled = false;
+    public bool isToggled = false;
     public AudioClip AnimationSound;
     private AudioSource audioSource;
     public float audioDelay = 0;
@@ -58,5 +58,12 @@ public class Triggerable : Interactable
     {
         if (GetComponent<AudioSource>() == null)
             audioSource = gameObject.AddComponent<AudioSource>();
+
+        if (isToggled)
+        {
+            var animator = GetComponentInParent<Animator>();
+            if (animator != null)
+                animator.SetBool("Trigger", true);
+        }
     }
 }
