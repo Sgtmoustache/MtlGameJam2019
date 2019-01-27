@@ -26,7 +26,7 @@ public class Pushable : Interactable
                     player.gameObject.AddComponent<FixedJoint>();
                     player.gameObject.GetComponent<FixedJoint>().connectedBody = r_object;
                     first_pass = false;
-                    r_object.mass = 10;
+                    r_object.mass = 1;
                 }
 
                 player.SendMessage("StopSideWay", false);
