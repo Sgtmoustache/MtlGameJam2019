@@ -43,6 +43,18 @@ ModelImporter:
     100074: bn_UpperArm_RT
     100076: //RootNode
     100078: Hands_01
+    100080: bn_Finger_nub
+    100082: bn_Finger_nub 1
+    100084: bn_Hand_nub
+    100086: bn_Hand_nub 1
+    100088: bn_Index_nub
+    100090: bn_Index_nub 1
+    100092: bn_Pinky_nub
+    100094: bn_Pinky_nub 1
+    100096: bn_Pinky_nub 2
+    100098: bn_Pinky_nub 3
+    100100: bn_Thumb_nub
+    100102: bn_Thumb_nub 1
     400000: bn_Camera
     400002: bn_Finger_ALT
     400004: bn_Finger_ART
@@ -83,6 +95,18 @@ ModelImporter:
     400074: bn_UpperArm_RT
     400076: //RootNode
     400078: Hands_01
+    400080: bn_Finger_nub
+    400082: bn_Finger_nub 1
+    400084: bn_Hand_nub
+    400086: bn_Hand_nub 1
+    400088: bn_Index_nub
+    400090: bn_Index_nub 1
+    400092: bn_Pinky_nub
+    400094: bn_Pinky_nub 1
+    400096: bn_Pinky_nub 2
+    400098: bn_Pinky_nub 3
+    400100: bn_Thumb_nub
+    400102: bn_Thumb_nub 1
     2100000: Hands_01
     4300000: Hands_01
     9500000: //RootNode
