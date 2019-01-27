@@ -798,7 +798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841a79313099f1f4481303a35beeb579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTexture: {fileID: 0}
+  fadeTexture: {fileID: 2800000, guid: 0f14cc11cf06c4a41a3dfa7e107d572f, type: 3}
+  test: 0
   fadespeed: 0
   drawDepth: -1000
 --- !u!1 &917650850
