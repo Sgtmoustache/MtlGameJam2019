@@ -391,8 +391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d424549c2bba14d8cd36be478f78f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverButtonImage: {fileID: 0}
-  normalButtonImage: {fileID: 0}
+  hoverButtonImage: {fileID: 21300000, guid: e3d0422995fe7a44e92e409e79c10fa6, type: 3}
+  normalButtonImage: {fileID: 21300000, guid: 29f594c52d249df4da837077815e6a5f, type: 3}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,8 +616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d424549c2bba14d8cd36be478f78f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverButtonImage: {fileID: 0}
-  normalButtonImage: {fileID: 0}
+  hoverButtonImage: {fileID: 21300000, guid: 437d37e8a95f3584e87086bc75979b2d, type: 3}
+  normalButtonImage: {fileID: 21300000, guid: 1dade1cf31337d14fbd3d7fc90f638f2, type: 3}
 --- !u!1 &988845043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,8 +1483,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d424549c2bba14d8cd36be478f78f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverButtonImage: {fileID: 0}
-  normalButtonImage: {fileID: 0}
+  hoverButtonImage: {fileID: 21300000, guid: ff47eb9484c94154497a1c4706014904, type: 3}
+  normalButtonImage: {fileID: 21300000, guid: 47f4e8d4e69c5974bb4a1ce2c257e8b7, type: 3}
 --- !u!1001 &1972510118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1683,5 +1683,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d424549c2bba14d8cd36be478f78f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverButtonImage: {fileID: 0}
-  normalButtonImage: {fileID: 0}
+  hoverButtonImage: {fileID: 21300000, guid: 6183a2dc1dde4074aa096f10a84d63c4, type: 3}
+  normalButtonImage: {fileID: 21300000, guid: f5b2ee9243aad7a408998c8c833c48e0, type: 3}
