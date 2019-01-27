@@ -53,6 +53,7 @@ public class Climbable : Interactable
 
     public void Climb()
     {
+        currentActive = TypeOfAction.CLIMABLE;
         player.GetComponentInChildren<Animator>().SetBool("Climb", true);
         RaycastHit hit;
         Ray rayFeet = new Ray(player.transform.GetChild(3).transform.position, player.transform.forward);
@@ -85,6 +86,7 @@ public class Climbable : Interactable
         done_up = false;
         done_side = false;
         travel = new Vector2();
+        currentActive = TypeOfAction.NOTHING;
     }
 
     void Update()
