@@ -34,7 +34,8 @@ public class Pushable : Interactable
 
                 if (Input.GetKey("w"))
                 {
-                    player.GetComponentInChildren<Animator>().SetBool("Push", true);
+                    if (!player.GetComponentInChildren<Animator>().GetBool("Pull"))
+                        player.GetComponentInChildren<Animator>().SetBool("Push", true);
                     Debug.Log("You pushed " + gameObject.name);
                     if(!audioSource.isPlaying)
                         audioSource.Play();
@@ -47,7 +48,8 @@ public class Pushable : Interactable
                 }
                 if (Input.GetKey("s"))
                 {
-                    player.GetComponentInChildren<Animator>().SetBool("Pull", true);
+                    if(!player.GetComponentInChildren<Animator>().GetBool("Push"))
+                        player.GetComponentInChildren<Animator>().SetBool("Pull", true);
                     Debug.Log("You pulled " + gameObject.name);
                     if (!audioSource.isPlaying)
                         audioSource.Play();
