@@ -123,6 +123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9174178803325954506}
+  - component: {fileID: 4392935665549661880}
   m_Layer: 0
   m_Name: bn_Door
   m_TagString: Untagged
@@ -145,6 +146,19 @@ Transform:
   m_Father: {fileID: 4097782432742522277}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4392935665549661880
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147789175298857184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.5, z: 3.2}
+  m_Center: {x: -1, y: 0, z: 0}
 --- !u!1 &4064150434319005651
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +220,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8190305061660614234}
+  - component: {fileID: 2154190694000114764}
+  - component: {fileID: 6283281546781080904}
   m_Layer: 0
   m_Name: bn_DoorNub
   m_TagString: Untagged
@@ -227,3 +243,32 @@ Transform:
   m_Father: {fileID: 9174178803325954506}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2154190694000114764
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451085154562933503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6283281546781080904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451085154562933503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7801665dcf4408741a986a7833a8532a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: -1
+  isToggled: 0
+  AnimationSound: {fileID: 8300000, guid: 43b02bc606bcd5f43a0ef35da57c2dd7, type: 3}
+  audioDelay: 0
