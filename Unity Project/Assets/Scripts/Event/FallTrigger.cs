@@ -20,12 +20,11 @@ public class FallTrigger : TriggerObject
     }
     IEnumerator PushAnimationManager(GameObject player)
     {
-        audioSource.PlayOneShot(ImpactSound);
+        if(ImpactSound != null)
+            audioSource.PlayOneShot(ImpactSound);
         player.GetComponentInChildren<Animator>().SetBool("Push", true);
         yield return new WaitForSeconds(2);
         player.GetComponentInChildren<Animator>().SetBool("Push", false);
-
-        
     }
 
     // Start is called before the first frame update

@@ -16,7 +16,8 @@ public class LightTrigger : TriggerObject
         {
             isOpen = !isOpen;
             light.enabled = isOpen;
-            audioSource.PlayOneShot(switchSound);
+            if(switchSound != null)
+                audioSource.PlayOneShot(switchSound);
         }
     }
 

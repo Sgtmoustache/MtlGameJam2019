@@ -52,7 +52,8 @@ public class Climbable : Interactable
         move_up = true;
         move_side = true;
 
-        audioSource.PlayOneShot(climbingSound);
+        if(climbingSound != null)
+            audioSource.PlayOneShot(climbingSound);
     }
 
     void Update()

@@ -65,7 +65,8 @@ public class CharacterController : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
-            otherAudioSource.PlayOneShot(pauseSound);
+            if(pauseSound != null)
+                otherAudioSource.PlayOneShot(pauseSound);
             if(pause)
             {
                 
