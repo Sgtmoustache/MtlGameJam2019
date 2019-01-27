@@ -98,11 +98,6 @@ public class CharacterController : MonoBehaviour
         if (!gateSideway) m_sideway = 0;
         if (!gateForward) m_forward = 0;
 
-        if (GetComponent<Rigidbody>().velocity.magnitude > speed)
-        {
-            GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity.normalized * speed;
-        }
-
         GetComponent<Rigidbody>().velocity = Vector3.Normalize(transform.forward) * m_forward + Vector3.Normalize(transform.right) * m_sideway + new Vector3(0,GetComponent<Rigidbody>().velocity.y,0);
 
         //transform.Translate(m_sideway, 0, m_forward);
