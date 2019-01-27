@@ -31,6 +31,7 @@ public class CharacterController : MonoBehaviour
     private bool gateSideway;
     private bool gateRotation;
     private bool pause;
+    private bool outofpause;
 
     public float interactionRange = 10f;
     private bool isLeftClicking = false;
@@ -43,6 +44,7 @@ public class CharacterController : MonoBehaviour
         Resume();
         WalkAudioSource = GetComponents<AudioSource>()[0];
         otherAudioSource = GetComponents<AudioSource>()[1];
+        outofpause = false;
 
         //CamLook
         view = transform.GetChild(0).gameObject;
@@ -57,6 +59,7 @@ public class CharacterController : MonoBehaviour
         gateSideway = true;
         gateRotation = true;
         Pmenu.SetActive(false);
+        outofpause = true;
     }
 
     void Update()
@@ -76,6 +79,7 @@ public class CharacterController : MonoBehaviour
                 gateRotation = false;
                 Pmenu.SetActive(true);
                 Time.timeScale = 0f;
+                
             }    
                 
         }
@@ -121,9 +125,11 @@ public class CharacterController : MonoBehaviour
             view.transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(-mouseLook.y, -30, 80), Vector3.right);
             transform.localRotation = Quaternion.AngleAxis(mouseLook.x, transform.up);
         }
-        isLeftClicking = Input.GetMouseButton(0);
+        
+        if(!outofpause)
         checkForObject();
         lastPosition = transform.position;
+        outofpause = false;
     }
 
     public void StopForward(bool b)
@@ -176,7 +182,7 @@ public class CharacterController : MonoBehaviour
                 if ((interactable is Triggerable || interactable is Collectable || interactable is Pickable) && Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("try something");
-                    interactable.Interact(gameObject, isLeftClicking);
+                    interactable.Interact(gameObject, Input.GetMouseButton(0));
                 }
             }
         }
