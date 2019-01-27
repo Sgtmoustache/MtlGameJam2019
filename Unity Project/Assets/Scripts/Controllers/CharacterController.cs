@@ -170,7 +170,7 @@ public class CharacterController : MonoBehaviour
                 if (interactable is Climbable && Input.GetKey("space"))
                 {
                     Debug.Log("try to climb");
-                    interactable.Interact(gameObject, hit);
+                    interactable.Interact(gameObject, true);
                 }
 
                 if (interactable is Pushable)
