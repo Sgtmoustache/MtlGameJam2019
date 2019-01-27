@@ -16,7 +16,12 @@ ModelImporter:
     3300002: Whisky01
     4300000: Whisky01
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wisky
+    second: {fileID: 2100000, guid: f30d72c0ad56a0542aaa456675c37384, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
