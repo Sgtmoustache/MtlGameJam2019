@@ -17,7 +17,7 @@ public abstract class TriggerObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (collisionTrigger && (currentCount < triggerCount || triggerCount < 0))
+        if (collisionTrigger && (currentCount <= triggerCount || triggerCount < 0))
         {
             TriggerEffect();
             currentCount++;
