@@ -1379,6 +1379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ventilateur_Asset 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1944187401, guid: 610cfe415ccfb0d4d9e3591577003236, type: 3}
+      propertyPath: m_TagString
+      value: Light
+      objectReference: {fileID: 0}
     - target: {fileID: 1944187403, guid: 610cfe415ccfb0d4d9e3591577003236, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.8
