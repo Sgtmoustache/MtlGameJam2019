@@ -138,8 +138,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Hands_Interact
       takeName: Take 001
-      firstFrame: 0
-      lastFrame: 210
+      firstFrame: 27
+      lastFrame: 175
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
