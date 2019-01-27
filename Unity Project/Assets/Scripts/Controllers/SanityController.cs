@@ -12,18 +12,17 @@ public class SanityController : MonoBehaviour
     public double startingSanity = 100;
     public double currentSanity;
     public double lightIntensity;
-    public ParticleSystem ps;
 
+    
     public GameObject[] lights = new GameObject[20];
 
-    public bool isDead;
+    bool isDead;
 
  
 
     // Start is called before the first frame update
     void Start()
     {
-        ps = GameObject.Find("Fog").GetComponent<ParticleSystem>();
         currentSanity = startingSanity;
         lights = GameObject.FindGameObjectsWithTag("Light");
         isDead = false;
@@ -73,32 +72,17 @@ public class SanityController : MonoBehaviour
 
     public void Rate()
     {
-        currentSanity = currentSanity + ((lightIntensity) - 5) * 0.06;
-        
+        currentSanity = currentSanity + ((lightIntensity) - 5) * 0.1;
+
         if (currentSanity >= 100)
         {
             //Can't have more than 100% sanity
             currentSanity = 100;
         }
 
-        if (currentSanity > 50)
-        {
-            var main = ps.main;
-            main.startSize = new ParticleSystem.MinMaxCurve(0f, 0f);
-            main.startLifetime = new ParticleSystem.MinMaxCurve(0f, 0f);
-        }
-            if (currentSanity < 50)
-        {
-            var main = ps.main;
-            main.startSize = new ParticleSystem.MinMaxCurve((float)(3.2 - currentSanity / 100 * 3), (float)(3.2 - currentSanity / 100 * 3));
-            // main.startLifetime = Vector3.Distance(main.transform.position, target.position) / main.startSpeed;
-            main.startLifetime = new ParticleSystem.MinMaxCurve((float)(1 + currentSanity / 100 * 15), (float)(1 + currentSanity / 100 * 15));
-            main.startSpeed = new ParticleSystem.MinMaxCurve((float)(3 - currentSanity / 100 * 3), (float)(1 - currentSanity / 100 * 3));
-        }
         //Debug.Log(currentSanity);
 
-
-        if (lightIntensity < 5)
+        if (lightIntensity < 2)
         {
             //Signal the player that he fears the dark
         }
@@ -114,7 +98,7 @@ public class SanityController : MonoBehaviour
         {
             // It should die.
             currentSanity = 0;
-            Death();
+            //Death();
         }
     }
     void Death()
@@ -122,10 +106,5 @@ public class SanityController : MonoBehaviour
         //Annimations and triggers checkpoint
         isDead = true;
         currentSanity = 0;
-        //var fade = GameObject.Find("Main Camera").GetComponent<FadeEvent>();
-        //fade.changebool();
-        Application.LoadLevel(Application.loadedLevel);
-        //fade.changebool();
-
     }
 }

@@ -13,7 +13,6 @@ public class Pushable : Interactable
         {
             if (input)
             {
-                GetComponent<Rigidbody>().isKinematic = true;
                 transform.parent = player.transform;
 
                 RaycastHit hit;
@@ -24,10 +23,10 @@ public class Pushable : Interactable
                 if (Physics.Raycast(rayFeet, out hit, 3))
                 {
 
-                    Vector3 test = (transform.position + Direction * (2f - Vector3.Distance(player.transform.position, hit.point)));
+                    Vector3 test = (transform.position + Direction * (2f - Vector3.Distance(player.transform.position,hit.point)));
                     transform.position = new Vector3(test.x, 0, test.z);
                 }
-
+                   
                 player.SendMessage("StopSideWay", false);
                 player.SendMessage("StopRotation", false);
 
@@ -60,7 +59,6 @@ public class Pushable : Interactable
             }
             if (!input)
             {
-                GetComponent<Rigidbody>().isKinematic = false;
                 audioSource.Stop();
                 player.GetComponentInChildren<Animator>().SetBool("Push", false);
                 player.GetComponentInChildren<Animator>().SetBool("Pull", false);
